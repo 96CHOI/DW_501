@@ -1,0 +1,52 @@
+
+#money{   
+    text-align: left;
+    margin:auto;
+    width: 1100px;
+    height: 30px;
+}
+#money tr th{
+    border: 1px solid black;
+    text-align: left;
+    margin:auto;
+    width: 200px;
+    height: 30px;
+    background-color: lightskyblue;
+}
+#money tr td{
+    border: 1px solid black;
+    text-align: center;
+    margin:auto;
+    width: 500px;
+    height: 30px;
+}
+#qt{
+    text-align: center;
+    width: 500px;
+    height: 30px;
+}
+.list{
+    
+    text-align: left;
+    margin:auto;
+    width: 1000px;
+    height: 30px;
+}
+.list th{
+    border: 1px solid black;
+    text-align: center;
+    background-color: lightskyblue;
+}
+
+.list tr td{
+    border: 1px solid black;
+    text-align: center;
+    margin:auto;
+    width: 500px;
+    height: 30px;
+}
+h3{
+    text-align: center;
+    text-shadow: 3px 3px 2px gray;
+    font-size: 30pt;
+}
