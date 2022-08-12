@@ -1,0 +1,167 @@
+
+ 08.11(목) 오후 Html (현상원 선생님)  Visual Studio Code - HTML_오후 - test 1. html 실행
+
+ --------------------------------------------------------------------------
+
+ 시작하기전!!
+ 1. !+TAB 키 눌러서 세팅
+ 2. ctrl + / 누르면 주석 (<!-- -->) 생성
+
+ --------------------------------------------------------------------------
+ 
+ 복습
+
+ 1. 아이디, 비밀번호 입력할 수 있는 상자 만들기
+  ※ 아이디 : <input type="text">
+  1) 상자 안에 작성전 보이는 글씨 만들기
+    ※ <input type="text" placeholder="아이디를 입력하세요.">
+
+ --------------------------------------------------------------------------
+
+ 안내창 띄우기
+
+ 1. ※ body 태그 밑에 작성
+    <script>
+        function show(){
+            alert("오늘은 목요일!")
+        }
+    </script>
+
+ 2. <input 태그 다음에  onclick="show()" 작성 후 > 꺽쇠 닫기
+
+ --------------------------------------------------------------------------
+
+ 오늘 배울 내용
+
+ 1. div 태그 : HTML 에서 90% 정도.. 엄청 많이 사용 하는 태그임.
+   ※ 모르면 사이트를 만드는데 한계가 있다.
+   ※ div는 박스태그라고 한다.
+  ex) 네이버 로그인 박스가 div 이다.
+   ** div는 별도로 br 태그를 사용하지 않아도 세로로 쌓인다.**
+ 
+ ※ 가로로 박스 넣기
+    <div>
+        <div>
+            아이디 : <input type="text">  
+            비밀번호 : <input type="password">
+    </div>
+ ※ 박스안에 박스 넣기 (세로로 됨)
+    <div>
+        <div>
+            아이디 : <input type="text">  
+        </div>
+        <div>
+            비밀번호 : <input type="password">
+        </div>
+    </div>
+-----------------------------------------------------------------
+
+  로그인 박스 네이버처럼 가운데로 모으기
+
+ 1. 로그인 제목과 박스 만들기
+     <div> 
+        <h3>길동컴퍼니 로그인</h3>
+        아이디 : <input type="text">
+        비밀번호 : <input type="password">
+    </div>
+
+ 2. div 이름 지어주기
+    <div class="login-box">
+        <h3>길동컴퍼니 로그인</h3>
+        아이디 : <input type="text">
+        비밀번호 : <input type="password">
+    </div>
+
+ 3. 네이버 처럼 가운데로 옮기기 (CSS를 사용해야함.)
+   ※ title 태그 밑에 작성
+    <style>
+        .login-box {
+            margin: 200px auto; (mirgin: 이동)
+            width: 300px;   (width: 가로 길이)
+            height: 200px;  (height: 세로 길이)
+        }
+    </style
+
+ 4. 내려서 자리 맞추기
+   ※ div 사용하기
+<div class="login-box">
+        <h3>YD컴퍼니 로그인</h3>
+        <div>
+        아이디 : <input type="text">
+        </div>
+        <div>
+        비밀번호 : <input type="password">
+        </div>
+    </div>
+
+ 5. 작성 박스 길이 늘리기
+ ※ style 태그에서 작성
+        input {
+            width:80%;
+        }
+-----------------------------------------------------------
+ ※ datalist 태그 (사용 잘 안함)
+    <input type="text" list="movie">
+    <datalist id="movie">
+        <option value="한산"></option>
+        <option value="외계+인 1부"></option>
+        <option value="헤어질 결심"></option>
+        <option value="탑건"></option>
+        <option value="헌트"></option>
+    </datalist> 
+------------------------------------------------------------
+ ※ detail 태그
+    <details>
+        <summary>가장 좋아하는 음식은?</summary>
+        <span>삼겹살</span>
+    </details>
+------------------------------------------------------------
+ ※ textarea 태그 (게시판에서 글작성할 때 사용)
+     <textarea cols="30" rows="10"></textarea>
+  ex) <h4>게시판<h4>
+     <textarea cols="30" rows="10"></textarea>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,201 @@
+!     느낌표  반댓말
+
+@   at        ~에
+
+#    hash    다져버린다.
+                암호화한다
+      예) abcd    321323$@$!233
+
+%    나머지를 구한다
+
+^    hat   지수
+
+(중요)  &   ampersand   그리고(and)
+
+|     vertical-bar    또는(or) 논리연산할때  <쉬프트 + 원\키>
+
+*    asterisk    삼라만상(모든것) css-> 모든걸 불러올때
+
+()    소괄호   
+{]    중괄호
+[]    대괄호
+<>  brackets  (꺽쇠)
+-     dash   (연산자 빼기)
+_    underbar     myCar  (cameCase)
+                      my_car (sneakCase) 변수명 지을때
+
+=   equal    대입  오른쪽에 내용을 왼쪽에 덮는다
+   예) a= 3;  (a라는 주머니에 숫자3을 더하라)
+        a= a + 1;   (a가 처음에는 3이었는데 a를 1 증가시켜라)
+==  같다 x  같냐?
+
+\ 와 역슬래시 같다 (거의안씀)   escape 문자를 쓸때 (줄바꿈)
+/   슬래시  나눗셈
+;   semi-colon   문장의 끝 (한 문장이 끝났다.;)
+:   colon           속성명, 속성값  구분
+    color:red;
+    font-size:2em;
+'' ""   따옴표    문자열 표시 string
+     예)   alert(); 경고창을 띄워라
+,    comma   여러가지연속된 데이터를 이야기할때 구분
+.    dot        부모.자식 구분
+?   물음표
+
+-----------html은 태그로 감싸주어야먄 태그가 적용됨---------------
+<strong></strong> 강조
+
+<b> 강조
+
+<br> 띄어쓰기 뒤에다 작성
+
+<p></p> 단락을 나타냄 paragraph의 줄임말 위 아래 여백 포함
+
+<pre></pre> 글씨 크기가 작은 단락을 나타냄
+
+html에서 font 태그는 쓸 일이 없다.
+
+size="" 글씨 크기
+
+color="" 글씨 색
+
+face="" 폰트
+
+<blokquote></blokquote>  인용글을 사용할 때 기본적으로 들여쓰기가 있다.
+
+<q></q> 짧은 인용글 ex)
+
+ 나는 <q>대한민국</q> 국민입니다. = 나는 "대한민국" 국민입니다. 로 출력
+
+<abbr> title=""</abbr> 약자를 쓸 때 사용
+
+<address></address> 문서나 글의 저자 또는 회사와 연락할 수 있는 정보를 명시할 때 사용합니다. 기울기 적용
+이 태그를 넣었을 때 수집이 용이하다.
+
+<img> 이미지 첨부 태그 단독으로 사용한다. <img 경로="이미지 이름">
+
+<cite></cite> 이미지에 대한 정보를 얻기위한 태그 (이미지 제목 설정) 약간의 기울기
+
+<em></em> 글씨에 대한 기울기
+
+<u></u> 밑줄
+
+<hr> 브라우저 크기만큼 선이 생김
+
+<h2></h2> text 크기와 단락 표현 (숫자 크기가 작을수록 크기가 다르다)
+
+<h1></h1>~<h6></h6> 까지 있다
+
+<pre></pre> 간략히 서술 표현(작은 글씨)
+
+<hr> 줄 그리기
+
+<p></p> 단락
+
+<b></b> 굵게
+
+<u></u> 글씨에 밑줄
+
+style="background : " 
+
+background << 배경색을 의미한다
+
+ex)
+<address style="background: black; color: wheat; text-align:center;" >
+
+
+<input type="text"> 입력 단어가 보이는 태그
+
+
+<input type="password"> 입력 단어가 안보이는 태그
+
+placeholder="" 뒷배경에 글씨 넣기
+
+ex)
+<input type="text" placeholder="아이디를 입력해주세요">
+
+<input type="password" placeholder="비밀번호를 입력해주세요">
+
+value="" 버튼 만들기1
+ex)
+<input type="button" value="로그인">
+
+<button> </button> 버튼만들기 2
+
+<a></a> 다른 페이지로 이동할 때 사용
+ex)
+ <a href="https://naver.com/">네이버 이동</a>
+
+<input type="month"> 월 달력 태그
+
+<input type="date"> 일 달력
+
+<input type="week"> 주 달력
+
+<input type="time" 시간
+
+<input type="file"> 파일 업로드
+
+<input type="checkbox"> 체크 박스
+
+<input type="number"> 숫자만 입력가능한 input
+
+<select> </select> 선택 태그
+ex)
+<select>
+        <option>아이스 아메리카노 M</option>
+</select>
+
+table 태그 배워보기-------------------
+
+<thead> 테이블 태그의 머리
+
+<tbody> 몸
+
+<tr></tr> tr은 table row 줄임말로 행을 의미
+
+<td></td> , <th></th> th는 table head 줄임말로 열을 의미
+			 td는 table data 줄임말로 열을 의미
+
+<th>는 <tr>의 헤드
+
+
+
+<table>
+        <thead>
+            <tr>
+                <th>출장비 내역</th>
+                <th>금액</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>교통비</td>
+                <td>32,000</td>
+            </tr>
+            <tr>
+                <td>숙박비</td>
+                <td>100,000</td>
+            </tr>
+            <tr>
+                <td>식비</td>
+                <td>50,000</td>
+            </tr>
+        </tbody>
+ 
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

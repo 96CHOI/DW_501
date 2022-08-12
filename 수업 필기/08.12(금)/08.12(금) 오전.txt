@@ -1,0 +1,105 @@
+
+ 08.12(금) 오전 Html (진계림 선생님)  Visual Studio Code - HTML - test 1. html 실행
+
+ ---------------------------------------------------------------------
+
+ ※ table 배우기 ※
+
+ ** tr : 줄
+ ** td : 칸
+
+ 1. 먼저 몇줄, 몇칸으로 만들것인지 정하기!
+
+ 2. table 태그 작성
+ 
+ 3. 정해진 줄 수 만큼 tr 만들기!
+
+ 4. tr 안쪽으로 정한 칸수 만큼 td 만들기!
+
+----------------------------------------------------------------------
+
+ ※ border: 선굵기 선종류 선색;  **선 표현하기**
+
+  border: 1px solid black;
+
+ ※ 보더의 선 위치
+  
+  border-right: 1px solid black;
+ /* top-위 , right-오른쪽, bottom-아래, left-왼쪽 */
+
+
+----------------------------------------------------------------------
+
+
+        table tr th{ 
+            border:1px solid red;
+            background-color: yellow;
+        }
+      ※ table 태그 안에 tr 태그 안에 th에 스타일 입히기
+
+        table tr td{ 
+            border-bottom: 1px solid black; /* border:선굵기 선종류 선색; */
+            border-right: 1px solid black;
+            /* top-위 , right-오른쪽, bottom-아래, left-왼쪽 */
+        }
+      ※ table 태그 안에 tr 태그 안에 td에 스타일 입히기
+
+---------------------------------------------------------------------
+ 
+ ※ HTML과 CSS(스타일) 을 각 각 다른 파일에서 작업할때 HTML에  link를 걸어주는방법
+
+   ** <link rel="stylesheet" href="table.css"> **
+
+--------------------------------------------------------------------------
+
+/*  table.css  */
+
+※ 이미지 크기 조정
+.animal img{
+    width: 195px;
+    height: auto;
+}
+
+※ 이미지 밑에 p태그 글씨 조정
+.animal p{
+    font-size: 12pt;
+    font-weight: 500;
+    text-shadow: none;
+}
+※ 모든 p 태그 조정
+p{
+    font-size:20pt;
+    font-weight: 700;
+    text-shadow: 3px 3px 2px gray;
+            
+}
+hr{
+    width: 635px;
+    margin-left: 0px;
+}
+table tr td{
+    border: 1px solid black;
+    width:200px;
+    height: 300px;
+}
+
+-------------------------------------------------------------------------
+ ** 과제가 있어요 (가계부 만들기) **
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

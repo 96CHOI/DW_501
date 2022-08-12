@@ -1,0 +1,78 @@
+
+ 08.08(월) 오전 front-end (진계림 선생님)  이클립스 실행 돋보기 옆  java ee
+
+ ---------------------------------------------------------------
+ (안보일경우) window -show view
+
+ http - 포로토콜
+ [인터넷에서, 웹 서버와 사용자의 인터넷 브라우저 사이에 문서를 전송하기 위해 사용되는 통신 규약]
+
+ 7layer
+ tcp/ip 4계층
+ tcp(현재 가장많이 사용)안정적으로 보냈느냐 udp 무자비하게 보냈느냐 
+ 세션 - 접속, 로그인 유지기능 - session
+ 표현 - jpg, png, mp4, 문자코드
+ 애플리케이션 (브라우저) - http, ftp, ssh, 등
+
+ 도메인 dns
+ dns서버 - 도메인 이름과 ip연결
+ 1. 내컴퓨터 브라우저에서 naver.com 입력
+ 2. 연결된 통신사 dns서버에 전달
+ 3. 통신사 dns서버에서 naver.com 검색
+ 4. 검색 결과 없으면  루트 dns서버에 전달
+ 5. 루트 dns서버에서  닷(.) 도메인 확인하여 최상위 dns서버에 전달
+ 6. 내컴퓨에 naver.com의 ip주소 전달
+ 7. 받은 ip주소로 이동하여 페이지 요청
+
+ 웹사이트 접속하기 위해 필요한것 
+ 프로토콜(통신규약) - http
+ 사이트 주소 - (문자) naver
+ 도메인(웹 영역) - .com
+ 포트 - :80
+
+ [html, css, javascript (기본적 3가지를 배워야 웹사이트 제작 가능)]
+
+ * 문장 끝에 <br> 줄바꿈 태그 (*종료태그 없음)
+
+ *<h0>태그 (기본적으로 한줄 다쓰는..) 줄바꿈 원할시 <br> (브레이크)
+
+ *글씨 굵게 <b> </b>볼드
+
+ *html은 계산 불가 오로지 보여주는것만 (계산하고싶을시 java script 사용)
+
+ *<Font> 글자모양 </Font> 현재는 사용 잘 안함 --> <p> 한 단락 표현 태그
+  색상 변경 <p style:'color:red'=  원하는 색상 -> 네이버 rgb 색상표 -> 색깔 정하고 밝기 정한 후 -> #123123 태그 복사
+  <p style='color:#009300; '> 글자모양 </p> = <p> 태그는 어디에도 사용 가능
+
+ *<Font size='10' color='blue' face='돋움'>2+3 </Font> Font 태그를 이용한 사이즈, 색깔, 폰트 변경법
+
+ * font 에서는 =  예)  <Font size='10'
+   p style 에서는 :  예) <p style='font-size:5pt; '>
+
+ * 폰트 사이즈 적을때 pt, em 사용 (pt가 em 보다 작은 느낌)
+
+ * 색깔 표현시 <p style:'color:#123123;'> 말고도 <p style:'color:rgb(8,84,255);' rgb 색상코드 1,12,123 입력도 가능
+    편한걸로 하되 javascript에서는 <p style:'color:rgb(8,84,255)' 쓰는게 좀더 세밀하게 표현 가능
+
+ * <strong></strong> 태그 강조 = <b></b> 태그와 다를것 없음
+
+ * 이클립스에서 태그 클릭 후 및에 properties 클릭하면 사용 가능 태그 나옴.
+
+ * <table></table> 표만들기,  줄 <tr></tr> ,  칸 <td></td> *모든 tr에 td 2개씩
+  - border 테두리  줄 그리기 태그 <table border='1'>
+
+ 이클립스 실행
+ java ee - new - dynamic web projact
+ <경로>
+ front - src - webapp - 오른쪽마우스 - new - html file(test)
+
+ <!-- --> (html 주석)
+   //  (java 주석)
+
+ <!--  html 주석 : 메모기능 프래그램 실행에 영향 없음  -->
+
+ <meta charset="EUC-KR"> (EUC-KR or UTF-8) 한글 인식되게 하기 위해 필수
+ * EUC-KR 간혹 한글 깨짐 (로그인, 게시글 작성), 이럴땐 UTF-8 (기본적 사용)
+
+ *자체 브라우저 띄우기(Ctrl+F11) 나중에 배우기
+ c드라이브 - java - front - src - main - webapp (test) !항상 body 부분에 적고 저장

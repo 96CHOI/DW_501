@@ -1,0 +1,124 @@
+
+ 08.10(수) 오후 Html (현상원 선생님)  Visual Studio Code - HTML - test 1. html 실행
+
+ ---------------------------------------------------------------------
+ 
+ 이전 수업시간 (JAVA - 변수, 데이터)
+ 
+ ---------------------------------------------------------------------
+
+ 1. <input type="text"> => 텍스트 입력 창 (입력 단어가 보이는 창)
+    ex) 아이디 : <input type="text"> 
+
+ 2. <input type="password"> => 암호화 된 입력 창
+    ex) 비밀번호 : <input type="password">
+
+ ※ 뒷 배경에 글씨넣기 -> ex) <input type="text" placeholder="아이디 입력해라">
+
+ 3. 1) <input type="button"> => 버튼 만드는 방법 첫번째
+     2) <button></button> => 버튼 만드는 방법 두번째
+    ※ <input type="button" value="로그인"> => 버튼에 멘트 넣기 value=""
+
+ 4. <a href=""> : a태그 -> 다른 페이지로 이동할때 사용
+    ex) <a href="https://www.naver.com">네이버로 가기</a>
+
+ ** input 태그 종류 알아보기 **
+
+ 1. 달력 만들기
+   1) <input type="month"> -> 월 달력 만들기
+
+   2) <input type="date"> -> 일 달력 만들기
+
+   3) <input type="week"> -> 주 달력 만들기
+
+ 2. 시간 선택 창
+   1) <input type="time">
+
+ 3. 파일 업로드 창
+   1) <input type="file">
+
+ 4. 체크박스 만들기
+   1) <input type="checkbox">
+
+ 5. only 숫자 입력 가능 input 태그
+   1) <input type="number">
+ ** select(선택) 태그 배워보기 **
+
+ 1. **선택 태그**
+   ex)
+    <select>
+        <option>아이스 아메리카노 M</option>
+        <option>아이스 아메리카노 L</option>
+        <option>원조 커피</option>
+    </select>
+
+ ** table 태그 배워보기 **
+
+ 1. 정리하고픈 내용 작성 (웹에서 시간표 같은걸 짤때)
+        <table>
+            <thead>
+                <tr>
+                    <th>출장비 내역</th>
+                    <th>금액</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>교통비</td>
+                    <td>32,000원</td>
+                </tr>
+                <tr>
+                    <td>숙박비</td>
+                    <td>100,000원</td>
+                </tr>
+                <tr>
+                    <td>식비</td>
+                    <td>50,000원</td>
+                </tr>
+            </tbody>
+        </table>
+
+  ※ 결과: 출장비 내역	금액
+             교통비	        32,000원
+             숙박비	       100,000원
+             식비	         50,000원
+
+ ** <thead> -> 테이블 태그의 머리 ( 표의 제목 ) **
+ ** <tbody> -> 테이블 태그의 몸 ( 표의 내용 ) **
+ ** <tr> -> tr 은 table row 줄임말로 행을 의미 **
+ ** <th> -> th는 table head 줄임말로 열을 의미 (tr의 제목) **
+ ** <td> -> td는 table data 줄임말로 열을 의미 (tr의 내용) **
+ 
+2. 표 입히기 (head 태그 부분 title 태그 밑에 작성) 
+    <style>
+        table,
+        th,
+        td{
+            border: 1px solid black;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
