@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제2</title>
+    <style>
+        .설문조사{
+            text-align: center;
+            background-color: lightgrey;
+            width: 450px;
+            height: 300px;
+            padding: 20px;
+            margin: 100px auto;
+        }
+        .설문조사 input{
+            border: 1.5px;
+            border-radius: 7px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            height: 40px;
+            width: 95%;
+        }
+        .버튼 input{
+            border-radius: 5px;
+            /* 박스의 모서리 둘글게 */
+            margin:auto;
+            background-color: blue;
+            color: white;
+            height: 40px;
+            border: 0;
+            outline: 0;
+            width: 97%;
+        }
+        .완료:hover{ /* 마우스 올릴 시 */
+            background-color: white;
+            color: blue;
+            /* 폰트 색깔 */
+            font-weight: bold;
+            /* 글씨 굵게 */
+            cursor: pointer;
+            /* 마우스 포인터 손가락모양 변경 */
+            transition: 0.5s;
+            /* 마우스 포인터 올릴시 변하는 시간 */
+        }
+    </style>
+</head>
+<body>
+    <div class="설문조사">
+        <h2>설문 조사</h2>
+            <input type="text" placeholder="이름 입력..."><br>
+            <input type="text" placeholder="취미 입력..."><br>
+            <input type="text" placeholder="거주 지역 입력..."><br>
+        <div class="버튼">
+            <input class="완료" class="qwer" type="button" value="작성완료" >
+        </div>
+    </div>
+</body>
+</html>
