@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> image_board.html </title>
+    <link rel="stylesheet" type="text/css" href="image_board.css">
+</head>
+<body>
+    
+    <div id="image_mask">
+        <div id="image_wrap">
+            <div class="image_title">
+                <div class="title_wrap">
+                    <b>갤러리</b>
+                </div>
+            </div>
+            <div id="image_list">
+                <div class="line_wrap">
+                    <div class="cell cell_one">
+                        <div style="background: url(한복1.jpg) no-repeat center;" class="img_area">
+                            <a href="gallery_view.html?name=한복1.jpg&type=jpg&title=여자한복1"></a>
+                        </div>
+                        <div class="title"><a href="gallery_view.html?name=한복1.jpg&type=jpg&title=여자한복1">여자한복 1</a></div>
+                    </div>
+                    <div class="cell cell_two">
+                        <div style="background: url(한복2.jpg) no-repeat center;" class="img_area">
+                            <a href="gallery_view.html?name=한복2.jpg&type=jpg&title=여자한복2"></a>
+                        </div>
+                        <div class="title"><a href="gallery_view.html?name=한복2.jpg&type=jpg&title=여자한복2">여자한복 2</a></div>
+                    </div>
+                    <div class="cell cell_three">
+                        <div style="background: url(한복3.jpg) no-repeat center;" class="img_area">
+                            <a href="gallery_view.html?name=한복3.jpg&type=jpg&title=여자한복3"></a>
+                        </div>
+                        <div class="title"><a href="gallery_view.html">여자한복 3</a></div>
+                    </div>
+                </div>
+                <div class="line_wrap">
+                    <div  class="cell cell_one">
+                        <div style="background: url(한복4.jpg) no-repeat center;" class="img_area">
+                            <a href="gallery_view.html?name=한복4.jpg&type=jpg&title=남자한복1"></a>
+                        </div>
+                        <div class="title"><a href="gallery_view.html?name=한복4.jpg&type=jpg&title=남자한복1">남자한복 1</a></div>
+                    </div>
+                    <div class="cell cell_two">
+                        <div style="background: url(한복5.jpg) no-repeat center;" class="img_area">
+                            <a href="gallery_view.html?name=한복4.jpg&type=jpg&title=남자한복2"></a>
+                        </div>
+                        <div class="title"><a href="gallery_view.html?name=한복5.jpg&type=jpg&title=남자한복2">남자한복 2</a></div>
+                    </div>
+                    <div class="cell cell_three">
+                        <div style="background: url(한복6.jpg) no-repeat center;" class="img_area">
+                            <a href="gallery_view.html?name=한복6.jpg&type=jpg&title=남자한복3"></a>
+                        </div>
+                        <div class="title"><a href="gallery_view.html?name=한복6.jpg&type=jpg&title=남자한복6">남자한복 3</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .a{
+            width: 400px; 
+            overflow: hidden;
+        }
+        .a img{
+            width: 400px;
+            transition: 0.5s;
+        }
+        .a:hover img{
+            transform: scale(1.4);
+        }
+    </style>
+    <div class="a">
+        <img src="한복1.jpg">
+    </div>
+
+
+</body>
+</html>
