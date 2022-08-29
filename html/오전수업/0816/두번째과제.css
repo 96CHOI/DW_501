@@ -1,0 +1,63 @@
+#a{
+    border: 1px solid black;
+    margin: auto;
+    width: 900px;
+    height: 30px;
+    font-family: 굴림;
+}
+#a tr{
+    margin: auto;
+    width: 800px;
+    height: 30px;
+    font-family: 굴림;
+}
+.yun td{
+    border: 1px solid white;
+    width: 500px;
+    height: 50px; 
+    text-align: center;
+}
+.b td{
+    border: 1px solid white;
+    width: 500px;
+    height: 50px; 
+    text-align: center;
+}
+.c td{
+    border: 1px solid black;
+    width: 200px;
+    height: 50px; 
+    text-align: center;
+}
+.d td{
+    border: 1px solid black;
+    width: 500px;
+    height: 50px; 
+    text-align: center;
+}
+.e td{
+    border: 1px solid black;
+    width: 500px;
+    height: 50px; 
+    text-align: center;
+}
+.f td{
+    border: 1px solid black;
+    width: 500px;
+    height: 50px; 
+    text-align: center;
+}
+.g td{
+    border: 1px solid black;
+    width: 500px;
+    height: 50px; 
+    text-align: center;
+}
+.animal img{
+    width: 195px;
+    height: auto;
+}
+.do:hover{color: #999;}
+.do{
+    background-color:  rgb(0,100,204);
+}

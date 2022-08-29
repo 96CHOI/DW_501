@@ -1,0 +1,12 @@
+/*
+.image{
+    float: left;
+}
+*/
+
+#box{
+    display: flex;
+    width: 600px;
+    /* flex-wrap: wrap;는 어떤 방향,형식으로 정하는 태그 */
+    flex-wrap: wrap;
+}

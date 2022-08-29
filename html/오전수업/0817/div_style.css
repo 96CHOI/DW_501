@@ -1,0 +1,62 @@
+/*  div_style.css  */
+
+#div1{
+    /* top:위, right:오른쪽, left:왼쪽, bottom:아래 */
+    /* 여백 - 밖: margin, 
+              안: padding */
+    margin-top: 50px;
+    margin-left: 100px;
+    border: 1px solid black;
+    width: 200px;
+}
+#div2{
+
+    border: 1px solid black;
+    margin: 30px 0 0 50px;
+    /* margin: 위 오른쪽 아래 왼쪽 (위쪽 부터 시계방향으로) */
+}
+#div3{
+    border: 1px solid black;
+    padding-top: 50px;
+    padding-left: 100px;
+    width: 200px;
+}
+
+#div4{
+    border: 1px solid black;
+    margin-bottom: 45px;
+    margin-left: 80px;
+}
+#div5{
+    border: 1px solid black;
+    margin-left: 80px;
+}
+#div6{
+    border: 1px solid black;
+    width: 600px;
+    height: 400px;
+}
+.d{
+    border: 1px solid black;
+    height: 30px;
+}
+.d1{
+    background-color: red;
+    margin-top: 20px;
+}
+.d2{
+    background-color: orange;
+    height: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.d3{
+    background-color: yellow;
+    margin: 15px 10px 0 10px;
+    height: auto;
+}
+.sub{
+    width: 50px;
+    height: 200px;
+    background-color: mediumspringgreen;
+}
