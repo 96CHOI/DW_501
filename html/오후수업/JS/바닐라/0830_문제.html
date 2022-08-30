@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="box" class="input-box">
+            <input type="text" placeholder="이름입력">
+            <input type="text" placeholder="연락처입력">
+            <input type="text" placeholder="이메일입력">
+            <input type="text" placeholder="주소입력">
+            <input type="text" placeholder="기타사항입력">
+        </div>
+        <button onclick="check()">제출</button>
+    </div>
+</body>
+<script>
+    function check(){
+    //문제. 제출 버튼을 눌렀을 때 input에 모두 입력이 되어있어야 된다.
+    //값을 입력하지 않고 누르면 "값을 입력해주세요!" alert창 보여주기!
+    //.length => 부모태그 자식의 갯수
+    var x = document.getElementById('box').children;
+        for(var i = 0; i<x.length; i++){//for 시작
+            var inputValue = x[i];
+            if(inputValue.value == ''){
+                alert('값을 입력해주세요!');
+                inputValue.focus();
+                return false;
+            }
+        }//for 끝
+    }
+
+</script>
+</html>
