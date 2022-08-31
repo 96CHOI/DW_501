@@ -1,0 +1,4 @@
+
+	-repositories : 폴더
+	-NEW 버튼을 눌러서 폴더를 만들어야 함.
+	-Add a README file 체크 必
