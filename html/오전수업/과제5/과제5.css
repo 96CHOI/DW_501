@@ -74,7 +74,8 @@ body{
 .section{
     background-color: azure;
     flex-basis: 100%;  
-    border: 1px solid black;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
     justify-content: space-around;
     padding: 2%;
     display: flex;

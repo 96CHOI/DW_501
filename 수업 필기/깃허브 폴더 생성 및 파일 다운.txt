@@ -2,3 +2,7 @@
 	-repositories : 폴더
 	-NEW 버튼을 눌러서 폴더를 만들어야 함.
 	-Add a README file 체크 必
+
+	----github 폴더 다운로드 받는 법
+	1. git clone <주소입력>
+	
