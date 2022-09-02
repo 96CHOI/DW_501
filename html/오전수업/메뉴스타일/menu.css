@@ -1,0 +1,39 @@
+/*  menu.css  */
+
+#menu{
+    width: 1000px;
+    height: 80px;
+    position: relative;
+}
+#menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+#main_menu{
+    list-style: none;
+    width: 1000px;
+    position: relative;
+}
+#main_menu>li{
+    width: 200px;
+    height: 80px;
+    float: left;
+    line-height: 80px;
+    text-align: center;
+    background-color: pink;
+    position: relative;
+}
+#main_menu .sub{
+    /* display: none; => 브라우저에서 어떻게 보이게 할거냐? (안보임) */
+    display: none; 
+}
+#main_menu .sub li{
+    
+}
+#main_menu:hover .sub{
+    display: block;
+    background: lightgoldenrodyellow;
+    height: 320px;
+}
