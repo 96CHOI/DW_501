@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var array = [10,4,8,19,20];
+    console.log(array[1]); //4 출력
+
+    var x = array[1]; //4가 x에 대입
+    if(x == 4){ //if 시작
+        console.log('x는 ' +x+ ' 입니다.')
+    }// if 끝
+
+    //배열에 있는 20을 출력하시오.
+    //방법1.
+    console.log(array[4]);
+    //방법2. (배열의 마지막을 쓸때 많이 사용하는 방법)
+    var size = array.length; //배열길이를 size라는 변수에 대입
+    console.log(array[size-1]); //무조건 배열에 마지막이 출력
+
+    //배열하고 for문은 친구
+    //문제1. for문을 이용해서 배열안에 있는 값을 출력하시오.
+    
+    for (var i=0; i<array.length; i++){
+        console.log(array[i]);
+    }
+
+    //문제2. for문을 이용해서 오리지널 도넛이 몇개 들어있는지 출력하시오.
+    var donut = ['오리지널 도넛','오리지널 도넛','오리지널 도넛','초코 도넛'];
+    var count = 0;
+    for(var i = 0; i<donut.length; i++){
+        var y = donut[i];
+        if(y == '오리지널 도넛'){
+            count++;
+        }
+    }
+    console.log('오리지널 도넛의 갯수는? ' + count + '개')
+
+    var cafe = ['스타벅스 선화점','스타벅스 대흥점','스타벅스 둔산점'];
+    //문제1. 스타벅스 대흥점이 몇번째에 있는지 for문을 이용해서 출력
+
+    for(var i = 0; i<cafe.length; i++){
+        if(cafe[i] == '스타벅스 대흥점'){
+            console.log('스타벅스 대흥점은 '+i+'번 째입니다.');
+            break;
+        }
+    }
+
+    var h = 0;
+    var j = 0;
+    var k = 0;
+    var character = ['전사','전사','전사','마법사','마법사','도적','도적'];
+    //문제2.. for문을 이용해서 전사, 마법사, 도적 각 몇명인지 출력하시오.!
+    for (var i = 0; i<character.length; i++){
+        //if else라는 문법이 있지만,
+        //클린한 코드를 위해서 if만 사용하자.
+        //유튜브 영상 : if else clean code 참고
+        if(character[i] == '전사'){
+        h++;
+        }
+        if(character[i] == '마법사'){
+        j++
+        }
+        if(character[i] == '도적'){
+        k++
+        }
+    }
+    console.log('현재 서버에 전사는 ' + h + '명','도적은 ' + j + '명','마법사는 ' + k + '명 입니다.')
+
+    //문제3. 배열안에 있는 10하고 20을 더한 값을 출력하시오.
+    var num = [10,20];
+    //var은 수식이다.
+    var q = num[0] + num[1]
+    console.log('10'+ '+' + '20' + '=' + q)
+
+    // 주니어 레벨에는 일단 무조건 변수 선언해서 대입하자
+    var x = num[0];
+    var y = num[1];
+    var result = x + y;
+    console.log('결과는 ? '+result);
+
+    var num2= [10,20,30];
+    //문제 for문 사용하지 말고 10,20,30을 모두 더하시오.
+    var x = num2[0];
+    var y = num2[1];
+    var z = num2[2];
+    var plus = x + y + z;
+    console.log('결과는 ? '+plus);
+
+    var value = num2[0] + num2[1] + num2[2];
+    console.log('결과는 ? '+value)
+
+    var sum = 0;
+    for (var i=0; i<num2.length; i++){
+        sum = sum + num2[i];
+    }
+    console.log('결과는 ? '+sum);
+
+</script>
+</html>
