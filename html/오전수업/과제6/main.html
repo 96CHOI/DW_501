@@ -51,16 +51,33 @@
             </div>
             <div class="section">
                 <div class="article">
-                    <div class="inner-list">
-                        <div class="inner">
-                            <img src="center.jpg">
-                        </div>
-                        <div class="inner">
-                            <img src="center2.jpg">
-                        </div>
-                        <div class="inner">
-                            <img src="center3.jpg">
-                        </div>
+                    <div class="slidebox">
+                        <input type="radio" name="slide" id="slide01" checked>
+                        <input type="radio" name="slide" id="slide02">
+                        <input type="radio" name="slide" id="slide03">
+                        <ul class="slidelist">
+                            <li class="slideitem">
+                                <a>
+                                    <label for="slide03" class="prev"></label>
+                                    <img onclick="location.href='join.html'" src="center1.jpg.jpg">
+                                    <label for="slide02" class="next"></label>
+                                </a>
+                            </li>
+                            <li class="slideitem">
+                                <a>
+                                    <label for="slide01" class="prev"></label>
+                                    <img src="center2.jpg.jpg">
+                                    <label for="slide03" class="next"></label>
+                                </a>
+                            </li>
+                            <li class="slideitem">
+                                <a>
+                                    <label for="slide02" class="prev"></label>
+                                    <img src="center3.jpg.jpg">
+                                    <label for="slide01" class="next"></label>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
