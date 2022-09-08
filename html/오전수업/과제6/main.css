@@ -193,3 +193,7 @@ ul, li {list-style:none;}
 	99% {left:100%;}
 	100% {left:0%;}
 }
+
+img:hover{
+    cursor: pointer;
+}
