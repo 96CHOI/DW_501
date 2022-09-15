@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /*
+        document.getElementById(num); // id
+        document.getElementsByClassName("클래스명"); // class
+        document.getElementsByName("name명"); // name
+        document.getElementsByTagName("태그명"); // 태그이름
+
+        //찾기
+        document.querySelector("#num"); // id
+        document.querySelector(".클래스명"); // class (.을 붙여 사용) (이름을 하나밖에 없는 클래스일 경우 찾는법)
+        document.querySelectorAll(".클래스명"); // class (이름이 여러개일 경우 찾는법)
+        document.querySelectorAll("[name명]"); // name
+        document.querySelectorAll("태그명"); // 태그이름
+        */
+        function data_push() {
+            // input 태그 가져오기
+            var number = document.getElementById("num");
+            var val = parseInt(number.value); // input 태그에 입력값 가져오기
+
+            // id가 result인 div 태그 가져오기
+            var res = document.getElementById("result");
+            
+            if( val % 2 == 0)
+                res.innerHTML = " 짝수입니당 ㅎ " //div태그 안에 값 넣어주기
+            else
+                res.innerHTML = " 홀수입니당 ㅎ "
+            
+            
+        }
+        // 입력값이 짝수인지 홀수 인지 출력 하시오.
+
+    </script>
+    <style>
+        #result{
+            font-size: 30pt;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" name="num" id="num" />
+    <button type="button" onclick="data_push()">입력</button>
+    <hr />
+    <div id="result"></div>
+
+    
+
+</body>
+</html>

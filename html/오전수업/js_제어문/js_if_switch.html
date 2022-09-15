@@ -128,7 +128,7 @@ switch(num) {
         document.write(' 잘못 선택했습니다. ');
     }
 */
-
+/*
 var select = prompt(" 1.데이터저장 2.데이터삭제 3.데이터추가 4.데이터수정 5.종료 ");
 
 switch( select ){
@@ -144,10 +144,43 @@ switch( select ){
         break;
     default:
         document.write(' 메뉴를 다시 선택하세요 ');
-}
+} */
+// 가위바위보 랜덤함수 사용
+// 랜덤값 1. 가위 2. 바위 3. 보
+// 랜덤값에 따라 현재 가위바위보중 무엇을 내었는가 출력
+// switch 문으로 구현
+/*        var player = parseInt(prompt("1.가위 2.바위 3.보"))
+        var com = Math.floor(Math.random() * 3) + 1;
+switch( player - com ) {
+    case -2:
+    case 1:
+        document.write(' 나의 승리다! ');
+        break;
+    case 2:
+    case -1:
+        document.write(' 나의 패배다.. ');
+        break;
+    case 0:
+        document.write(' 비겼다..크... ');
+    } */
 
-
-
+    // 점수를 입력 받아서 90점 이상이면 'A등급' , 80점이상이면 'B등급' ,
+    // 70점이상이면 'C등급' 나머지는 'F등급' 이라고 출력하기
+    var jumsu = parseInt(prompt(" 점수를 입력하세요 "))
+    switch( parseInt(jumsu/10) ) {
+        case 10:
+        case 9:
+            document.write(' A등급 입니다. ');
+            break;
+        case 8:
+            document.write(' B등급 입니다. ');
+            break;
+        case 7:
+            document.write(' C등급 입니다. ');
+            break;
+        default:
+            document.write(' F등급 입니다. ');
+    }
 
     </script>
 
