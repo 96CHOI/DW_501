@@ -51,39 +51,28 @@ body{
     display: flex;
     height: 600px;
 }
-.login_id{
+.login{
+    margin: 50px auto;
+    height: 500px;
+    width: 450px;
+}
+.login_box{
     display: flex;
-    margin-left: 460px;
-    margin-top: 100px;
 }
-.id1{
-    margin-left: 70px;
+.login_box p{
+    width: 150px;
+    height: 20px;
+    text-align: right;
+    margin-right: 20px;
 }
-.login_pw{
-    display: flex;
-    margin-left: 460px
-}
-.pw1{
-    margin-left: 55px;
-}
-.name{
-    margin-left: 85px;
-}
-.num{
-    margin-left: 70px;
-}
-.e_mail{
-    margin-left: 70px;
-}
-.id{
-    margin-bottom: 10px;
-}
-.pw{
-    margin-bottom: 10px;
-}
-input{
+.login_box input {
     width: 250px;
-    margin-left: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 1;
+}
+.login_box{
+    align-items: center;
 }
 button{
     width: 450px;

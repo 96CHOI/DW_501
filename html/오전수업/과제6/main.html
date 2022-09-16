@@ -20,19 +20,19 @@
         <div class="center">
             <div class="nav">
                 <div class="login">
-                    <div class="login_id">
+                    <div class="login_box">
                         <div class="id">
-                            <b>아이디</b>
+                            <p>아이디</p>
                         </div>
-                        <div class="id1">
+                        <div>
                             <input type="text">
                         </div>
                     </div>
-                    <div class="login_pw">
+                    <div class="login_box">
                         <div class="pw">
-                            <b>비밀번호</b>
+                            <p>비밀번호</p>
                         </div>
-                        <div class="pw1">
+                        <div>
                             <input type="password">
                         </div>
                     </div>
@@ -43,10 +43,10 @@
                     </div>
                 </div>
                     <ul>
-                        <li><a href="list.html">컴퓨터</a></li>
-                        <li><a href="list2.html">냉장고</a></li>
-                        <li><a href="list3.html">TV</a></li>
-                        <li><a href="list4.html">에어컨</a></li>
+                        <li><a onclick="menu()">컴퓨터</a></li>
+                        <li><a onclick="menu()">냉장고</a></li>
+                        <li><a onclick="menu()">TV</a></li>
+                        <li><a onclick="menu()">에어컨</a></li>
                     </ul>
             </div>
             <div class="section">
@@ -84,6 +84,11 @@
         </div>
     </div>
 </body>
-</html>
-</body>
+
+<script>
+    function menu() {
+        alert("로그인 후 이용가능합니다.^,^")
+    }
+</script>
+
 </html>

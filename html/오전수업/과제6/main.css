@@ -88,15 +88,18 @@ body{
     margin-top: 15px;
     margin-bottom: 20px;
 }
-
-.login_id{
+.login_box{
     display: flex;
+}
+.login_box p{
+    width: 70px;
+    height: 20px;
+    text-align: right;
+    margin-right: 20px;
+    font-weight: bold;
 }
 .id1{
     margin-left: 30px;
-}
-.login_pw{
-    display: flex;
 }
 .pw1{
     margin-left: 15px;
