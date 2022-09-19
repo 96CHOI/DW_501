@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squid game</title>
+    <style>
+     body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 0 auto;
+    height: 0 auto;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 1300px;
+        height: 100vh;
+        margin: 0 auto;
+    }
+    .header{
+        flex-basis: 10%;
+        display: flex;
+        margin-top: 20px;
+    }
+    .header img{
+        flex-basis: 80%;
+        color: black;
+        width: 1300px;
+    }
+    .header_img img{
+        width: 1200px;
+        padding-left: 40px;
+        padding-top: 5px;
+    }
+    .center{
+        flex-basis: 80%;
+        /* 아이템도 flex가 될 수 있다. */
+        display: flex;
+        height: 600px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    .join_bt a{
+        text-decoration-line: none;
+        color: black;
+        font-weight: 700;
+    }
+    .section{
+        background-color: rgba(35, 35, 35, 160);
+        flex-basis: 100%;  
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        height: 1050px;
+        width: 1100px;
+        color: white;
+    }
+    .computer{
+        margin: 0 auto;
+        height: 200px;
+        width: 200px;
+        text-align: center;
+        background-size: 200px 200px;
+    }
+    .computer img{
+        width: 200px;
+        height: 200px;
+    }
+    .computer1{
+        margin: 0 auto;
+    }
+    .computer2{
+        position: relative;
+        height: 300px;
+        margin-top: 18px;
+        text-align: center;
+    }
+    .player{
+        margin: 0 auto;
+        height: 300px;
+        width: 800px;
+        text-align: center;
+    }
+    .player_box{
+        display: flex;
+    }
+    .player_box img{
+        width: 100px;
+        height: 100px;
+    }
+    .game_img img{
+        width: 200px;
+        height: 200px;
+    }
+    .game_img button{
+        margin-right: 20px;
+        background-color: rgba(35, 35, 35, 160);
+        border: 0;
+    }
+    .game_img{
+        background-color: none;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    p{
+        font-weight: bold;
+        font-size: 25pt;
+        margin-bottom: 30px;
+    }
+    button{
+        margin-top: 10px;
+        border-radius: 5%;
+    }
+    #result_box{
+        font-size: 20px;
+        font-weight: 600;
+        color: black;
+        text-align: center;
+        color: white;
+    }
+    #result{
+        color: #E94B85;
+        font-size: 40px;
+        font-weight: 600;
+    }
+    </style>
+    <script>
+        var gaibaibo = document.getElementById("scissors");
+        var count = 0;
+        var str;
+        function start(){
+            if(count==0){
+                document.getElementById("game").src = "scissors.jpg"
+                count++;
+            }
+            else if(count==1){
+                document.getElementById("game").src = "rock.jpg"
+                count++;
+            }
+            else{
+                document.getElementById("game").src = "paper.jpg"
+                count = 0;
+            }
+            str=setTimeout(start,100)
+        }
+        function kawi(r) {
+            var res = document.getElementById("result");
+            clearTimeout(str)
+            var user =  r.id;
+            var com = Math.floor(Math.random()*3)+1;
+            if(user == "kawi"){
+                if(com== 1 ){
+                    document.getElementById("game").src = "scissors.jpg";
+                    res.innerHTML = "성기훈 : 가위 - " + "공유 : 가위" + "<br>"+ "비겼으니 한판더.."
+                } else if ( com == 2){
+                    document.getElementById("game").src = "paper.jpg";
+                    res.innerHTML = "성기훈 : 가위 - " + "공유 : 보" + "<br>"+ " 10만원!!"
+                } else{
+                    document.getElementById("game").src = "rock.jpg";
+                    res.innerHTML = "성기훈 : 가위 - " + "공유 : 바위" + "<br>"+ "뺨한대 짝!!"
+                }
+            }
+            if(user == "rock"){
+                if(com== 1 ){
+                    document.getElementById("game").src = "scissors.jpg";
+                    res.innerHTML = "성기훈 : 바위 - " + "공유 : 가위"+ "<br>"+ " 10만원!!"
+                } else if ( com == 2){
+                    document.getElementById("game").src = "paper.jpg";
+                    res.innerHTML = "성기훈 : 바위 - " + "공유 : 보" + "<br>"+ "뺨한대 짝!!"
+                } else{
+                    document.getElementById("game").src = "rock.jpg";
+                    res.innerHTML = "성기훈 : 바위 - " + "공유 : 바위" + "<br>"+ "비겼으니 한판더.."
+                }
+            }
+            if(user == "pa"){
+                if(com== 1 ){
+                    document.getElementById("game").src = "scissors.jpg";
+                    res.innerHTML = "성기훈 : 보 - " + "공유 : 가위" + "<br>"+ "뺨한대 짝!!"
+                } else if ( com == 2){
+                    document.getElementById("game").src = "paper.jpg";
+                    res.innerHTML = "성기훈 : 보 - " + "공유 : 보" + "<br>"+ "비겼으니 한판더.."
+                } else{
+                    document.getElementById("game").src = "rock.jpg";
+                    res.innerHTML = "성기훈 : 보 - " + "공유 : 바위" + "<br>"+ " 10만원!!"
+                }
+            }
+            str = setTimeout(start,1200)
+        }
+    </script>
+</head>
+<body>
+    <body onload="start()">
+        <div class="container">
+            <div class="header">
+                <img src="logo2.jpg">
+            </div>
+            <div class="center">
+                <div class="section">
+                    <div class="computer1">
+                        <div class="computer2">
+                            <p>공유</p>
+                            <div class="computer" style="display: block">
+                                <div class="scissors"><img src="scissors.jpg" id="game" ></div>
+
+                            </div>
+                        </div>
+                        <div id="result_box">
+                            <h2>결과</h2>
+                            <div id="result">
+                                <img id="result01">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="player">
+                        <p>성기훈</p>
+                        <div class="player_box">
+                            <img src="gong.jpg">
+                            <p>선생님, 저와 게임 하나 하시겠습니까?</p>
+                            <img src="kihoon.jpg">
+                        </div>
+                        <div class="game_img">
+                            <button  onclick="kawi(this)" class="kwai" id="kawi"><img src="scissors.jpg"></button>
+                            <button  onclick="kawi(this)" class="kwai" id="rock"><img src="rock.jpg" ></button>
+                            <button  onclick="kawi(this)" class="kwai" id="pa"><img src="paper.jpg"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</body>
+</html>

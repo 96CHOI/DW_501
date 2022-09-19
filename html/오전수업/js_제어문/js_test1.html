@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    #input_wrap{
+        display: flex;
+        flex-direction: column; /*flex 가로로 배치하기*/
+        width: 300px;
+    }
+    #input_wrap input{
+        height: 40px;
+        font-size: 1.7rem;
+        /* rem : 현재 html 사이즈에서 1.7만큼 증가시킨다.*/
+    }
+</style>
+
+<script>
+    // 두개의 숫자를 입력받아 두 숫자중 큰숫자를 출력하시오.
+    function excute(){ /*입력 값이 출력될 div 태그 불러오기*/
+        var number1 = document.getElementById('number1').value;
+        var number2 = document.querySelector('#number2').value;
+        var res = document.getElementById("result")
+            if (parseInt(number1) > parseInt(number2)){
+                res.innerHTML = "<h2> 두 숫자중 큰숫자는 ? => " + number1 + "</h2>";
+            } else{
+                res.innerHTML = "<h2> 두 숫자중 큰숫자는 ? => " + number2 + "</h2>";
+            }
+    }
+
+</script>
+
+
+</head>
+<body>
+    
+    <div id="input_wrap">
+        <input type="text" id="number1" placeholder="정수입력">
+        <input type="text" id="number2" placeholder="정수입력">
+        <input type="button" onclick="excute()" value="입력">
+    </div>
+    <hr>
+    <div id="result"></div>
+
+</body>
+</html>

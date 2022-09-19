@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #info input{
+        width: 100px;
+    }
+</style>
+<script type="text/javascript">
+    // 직업이 군인 또는 변호사만 출력하기
+    function enroll(){ /*입력 값이 출력될 div 태그 불러오기*/
+        var name = document.getElementById('name').value;
+        var job = document.getElementById('job').value;
+        var age = document.getElementById('age').value;
+        var res = document.getElementById("result")
+            if (job == "군인" || job == "변호사" || job == "공무원"){
+                res.innerHTML = "<h2> 이름 : " + name + " 직업 : " + job + " 나이 : " + age + "세 " + "</h2>";
+                // res.innerHTML -> res라는 태그안에 HTML형식으로 표현하겠다.
+                var age_year = age
+                var title = "나이 : ";
+                if(job == "공무원"){
+                    age_year = 2022 - parseInt(age) + 1;
+                    title = ' 출생년도 : '
+                }
+                res.innerHTML = "<h2> 이름 : " + name + " 직업 : " + job + title + age_year + "년생 " +"</h2>";
+            } else{
+                res.innerHTML = "<h2> 이름 : " + name + " 직업 : " + "마음에 안들어서 출력 안함" + " 나이 : " + age + "</h2>";
+            }
+    }
+    // 직업이 군인 또는 변호사, 공무원 출력하기
+    // 직업이 공무원인 사람만 나이 대신 출생년도로 출력 하기
+</script>
+<body>
+    <div>
+        <input type="text" id="name" placeholder="이름" />
+        <input type="text" id="job" placeholder="직업" />
+        <input type="text" id="age" placeholder="나이" />
+        <input type="button" onclick="enroll()" value="등록" />
+    </div>
+    <hr>
+    <div id="result">
+
+    </div>
+</body>
+</html>
