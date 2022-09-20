@@ -7,39 +7,31 @@
     <title>Squid game</title>
     <style>
      body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    width: 0 auto;
-    height: 0 auto;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
     }
     .container{
         display: flex;
         flex-direction: column;
-        width: 1300px;
-        height: 100vh;
         margin: 0 auto;
     }
     .header{
-        flex-basis: 10%;
         display: flex;
-        margin-top: 20px;
+        background-color: rgba(35, 35, 35, 160);
+        align-items: center;
+        width: 0 auto;
+        height: 0 auto;
     }
     .header img{
-        flex-basis: 80%;
         color: black;
-        width: 1300px;
-    }
-    .header_img img{
-        width: 1200px;
-        padding-left: 40px;
-        padding-top: 5px;
+        margin: 0 auto;
+        width: 100%;
     }
     .center{
-        flex-basis: 80%;
         /* 아이템도 flex가 될 수 있다. */
-        display: flex;
-        height: 600px;
+        margin: 0;
+        padding: 0;
     }
     button:hover{
         cursor: pointer;
@@ -51,39 +43,39 @@
     }
     .section{
         background-color: rgba(35, 35, 35, 160);
-        flex-basis: 100%;  
-        display: flex;
         flex-direction: column;
         padding: 0;
-        height: 800px;
-        width: 900px;
+        margin: 0;
         color: white;
+        margin-top: 0;
+        height: 100vh;
     }
+
     .computer{
-        margin: 0 auto;
-        height: 100px;
-        width: 100px;
+        width: 0 auto;
         text-align: center;
         background-size: 200px 200px;
     }
     .computer img{
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
     }
     .computer1{
         margin: 0 auto;
     }
     .computer2{
+        padding-top: 30px;
         position: relative;
         height: 200px;
-        margin-top: 18px;
         text-align: center;
+        padding-bottom: 50px;
     }
     .player{
         margin: 0 auto;
         height: 300px;
         width: 800px;
         text-align: center;
+        margin-top: 80px;
     }
     .player_box{
         display: flex;
@@ -91,12 +83,12 @@
         justify-content: center;
     }
     .player_box img{
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
     }
     .game_img img{
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
     }
     .game_img button{
         margin-right: 20px;
@@ -111,15 +103,19 @@
     }
     p{
         font-weight: bold;
-        font-size: 20pt;
+        font-size: 25pt;
         margin-bottom: 30px;
+        margin-top: 0;
+        text-align: center;
+        padding-left: 70px;
+        padding-right: 70px;
     }
     button{
         margin-top: 10px;
         border-radius: 5%;
     }
     #result_box{
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 600;
         color: black;
         text-align: center;
@@ -129,6 +125,7 @@
         color: #E94B85;
         font-size: 25px;
         font-weight: 600;
+        margin-bottom: 20px;
     }
     </style>
     <script>
@@ -158,37 +155,37 @@
             if(user == "kawi"){
                 if(com== 1 ){
                     document.getElementById("game").src = "scissors.jpg";
-                    res.innerHTML = "성기훈 : 가위 - " + "공유 : 가위" + "<br>"+ "비겼으니 한판더.."
+                    res.innerHTML = "비겼으니 한판더..";
                 } else if ( com == 2){
                     document.getElementById("game").src = "paper.jpg";
-                    res.innerHTML = "성기훈 : 가위 - " + "공유 : 보" + "<br>"+ " 10만원!!"
+                    res.innerHTML = "승리!!!  10만원!!!";
                 } else{
                     document.getElementById("game").src = "rock.jpg";
-                    res.innerHTML = "성기훈 : 가위 - " + "공유 : 바위" + "<br>"+ "뺨한대 짝!!"
+                    res.innerHTML = "패배... 뺨한대 짝!!!";
                 }
             }
             if(user == "rock"){
                 if(com== 1 ){
                     document.getElementById("game").src = "scissors.jpg";
-                    res.innerHTML = "성기훈 : 바위 - " + "공유 : 가위"+ "<br>"+ " 10만원!!"
+                    res.innerHTML = "승리!!!  10만원!!!";
                 } else if ( com == 2){
                     document.getElementById("game").src = "paper.jpg";
-                    res.innerHTML = "성기훈 : 바위 - " + "공유 : 보" + "<br>"+ "뺨한대 짝!!"
+                    res.innerHTML = "패배... 뺨한대 짝!!!";
                 } else{
                     document.getElementById("game").src = "rock.jpg";
-                    res.innerHTML = "성기훈 : 바위 - " + "공유 : 바위" + "<br>"+ "비겼으니 한판더.."
+                    res.innerHTML = "비겼으니 한판더..";
                 }
             }
             if(user == "pa"){
                 if(com== 1 ){
                     document.getElementById("game").src = "scissors.jpg";
-                    res.innerHTML = "성기훈 : 보 - " + "공유 : 가위" + "<br>"+ "뺨한대 짝!!"
+                    res.innerHTML = "패배... 뺨한대 짝!!!";
                 } else if ( com == 2){
                     document.getElementById("game").src = "paper.jpg";
-                    res.innerHTML = "성기훈 : 보 - " + "공유 : 보" + "<br>"+ "비겼으니 한판더.."
+                    res.innerHTML = "비겼으니 한판더..";
                 } else{
                     document.getElementById("game").src = "rock.jpg";
-                    res.innerHTML = "성기훈 : 보 - " + "공유 : 바위" + "<br>"+ " 10만원!!"
+                    res.innerHTML = "승리!!!  10만원!!!";
                 }
             }
             str = setTimeout(start,1200)
@@ -212,7 +209,6 @@
                             </div>
                         </div>
                         <div id="result_box">
-                            <h2>결과</h2>
                             <div id="result">
                                 <img id="result01">
                             </div>
@@ -222,7 +218,7 @@
                         <p>성기훈</p>
                         <div class="player_box">
                             <img src="gong.jpg">
-                            <p>선생님, 저와 게임 하나 하시겠습니까?</p>
+                            <p>선생님, 저와 게임 <br> 한판 하시겠습니까?</p>
                             <img src="kihoon.jpg">
                         </div>
                         <div class="game_img">
