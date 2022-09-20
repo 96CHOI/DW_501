@@ -20,8 +20,6 @@
         display: flex;
         background-color: rgba(35, 35, 35, 160);
         align-items: center;
-        width: 0 auto;
-        height: 0 auto;
     }
     .header img{
         color: black;
@@ -43,39 +41,35 @@
     }
     .section{
         background-color: rgba(35, 35, 35, 160);
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
         color: white;
-        margin-top: 0;
         height: 100vh;
     }
-
     .computer{
-        width: 0 auto;
         text-align: center;
         background-size: 200px 200px;
-    }
-    .computer img{
         width: 150px;
         height: 150px;
-    }
-    .computer1{
         margin: 0 auto;
+    }
+    .computer img{
+        margin: 0 auto;
+        width: 100%;
     }
     .computer2{
         padding-top: 30px;
         position: relative;
-        height: 200px;
+        height: 250px;
         text-align: center;
-        padding-bottom: 50px;
+        align-items: center;
+        padding-bottom: 60px;
+        width: 100%;
+        
     }
     .player{
         margin: 0 auto;
         height: 300px;
-        width: 800px;
         text-align: center;
-        margin-top: 80px;
+        margin-top: 40px;
     }
     .player_box{
         display: flex;
@@ -85,6 +79,7 @@
     .player_box img{
         width: 150px;
         height: 150px;
+        width: 0 auto;
     }
     .game_img img{
         width: 150px;
@@ -158,19 +153,19 @@
                     res.innerHTML = "비겼으니 한판더..";
                 } else if ( com == 2){
                     document.getElementById("game").src = "paper.jpg";
-                    res.innerHTML = "승리!!!  10만원!!!";
+                    res.innerHTML = " <img src='kihoon1.jpg'> <br> 승리!!!  10만원!!!";
                 } else{
                     document.getElementById("game").src = "rock.jpg";
-                    res.innerHTML = "패배... 뺨한대 짝!!!";
+                    res.innerHTML = " <img src='kihoon2.jpg'> <br>  패배... 뺨한대 짝!!!";
                 }
             }
             if(user == "rock"){
                 if(com== 1 ){
                     document.getElementById("game").src = "scissors.jpg";
-                    res.innerHTML = "승리!!!  10만원!!!";
+                    res.innerHTML = " <img src='kihoon1.jpg'> <br> 승리!!!  10만원!!!";
                 } else if ( com == 2){
                     document.getElementById("game").src = "paper.jpg";
-                    res.innerHTML = "패배... 뺨한대 짝!!!";
+                    res.innerHTML = " <img src='kihoon2.jpg'> <br>  패배... 뺨한대 짝!!! ";
                 } else{
                     document.getElementById("game").src = "rock.jpg";
                     res.innerHTML = "비겼으니 한판더..";
@@ -179,13 +174,13 @@
             if(user == "pa"){
                 if(com== 1 ){
                     document.getElementById("game").src = "scissors.jpg";
-                    res.innerHTML = "패배... 뺨한대 짝!!!";
+                    res.innerHTML = " <img src='kihoon2.jpg'> <br>  패배... 뺨한대 짝!!!";
                 } else if ( com == 2){
                     document.getElementById("game").src = "paper.jpg";
                     res.innerHTML = "비겼으니 한판더..";
                 } else{
                     document.getElementById("game").src = "rock.jpg";
-                    res.innerHTML = "승리!!!  10만원!!!";
+                    res.innerHTML = " <img src='kihoon1.jpg'> <br> 승리!!!  10만원!!!";
                 }
             }
             str = setTimeout(start,1200)
@@ -200,12 +195,10 @@
             </div>
             <div class="center">
                 <div class="section">
-                    <div class="computer1">
                         <div class="computer2">
                             <p>공유</p>
-                            <div class="computer" style="display: block">
+                            <div class="computer" >
                                 <div class="scissors"><img src="scissors.jpg" id="game" ></div>
-
                             </div>
                         </div>
                         <div id="result_box">
@@ -213,7 +206,6 @@
                                 <img id="result01">
                             </div>
                         </div>
-                    </div>
                     <div class="player">
                         <p>성기훈</p>
                         <div class="player_box">
