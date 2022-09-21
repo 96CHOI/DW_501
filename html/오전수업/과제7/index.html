@@ -124,25 +124,25 @@
     }
     </style>
     <script>
-        var gaibaibo = document.getElementById("scissors");
+        var gaibaibo = document.getElementById("scissors"); // scissors 라는 div id를 불러온다. (그 안에서 돌아감)
         var count = 0;
         var str;
-        function start(){
-            if(count==0){
+        function start(){ //반복적으로 돌아가게 할 태그
+            if(count==0){ // 가위 표현
                 document.getElementById("game").src = "scissors.jpg"
-                count++;
+                count++; 
             }
-            else if(count==1){
+            else if(count==1){ //주먹 표현
                 document.getElementById("game").src = "rock.jpg"
                 count++;
             }
-            else{
+            else{ //보 표현
                 document.getElementById("game").src = "paper.jpg"
                 count = 0;
             }
-            str=setTimeout(start,100)
+            str=setTimeout(start,100) // 몇초에 한번씩 돌아가게 할것인가
         }
-        function kawi(r) {
+        function kawi(r) { // 선택에 대한 승패 룰 지정
             var res = document.getElementById("result");
             clearTimeout(str)
             var user =  r.id;
@@ -180,7 +180,7 @@
                     res.innerHTML = "비겼으니 한판더..";
                 } else{
                     document.getElementById("game").src = "rock.jpg";
-                    res.innerHTML = " <img src='kihoon1.jpg'> <br> 승리!!!  10만원!!!";
+                    res.innerHTML = " <img src='[크기변환]kihoon1.jpg'> <br> 승리!!!  10만원!!!";
                 }
             }
             str = setTimeout(start,1200)
