@@ -5,8 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+<script>
+    // 반복문
+    // for (초기값; 조건식; 증감식)
+    // 랜덤값( 랜덤 범위 1~100 ) 중에서 4의 배수만 출력하기
+    // 20번 반복하여 4의 배수만 출력하기
+    /*
+    var i = 1;
+    for (i = 1; i <= 20; i++){ // 20번 반복하는 조건
+        var res = Math.floor(Math.random()*100)+1; //20번 반복하는 도중 랜덤값 조건
+        if(res % 4 == 0) //4의 배수 조건
+        document.write(res + "<br>");
+    } */
+
+    // 입력은 prompt로 입력하기
+    // 반복횟수 10번
+    // 랜덤범위는 1~10
+    // 10번 숫자를 입력하여 입력한 숫자가 랜덤값과 일치하면
+    // 지뢰 밟음 사망, 일치하지 않으면 회피성공 출력하기
+    /*
+    for(var i=1; i<11; i++){ // 숫자입력 횟수 설정
+        var sum = parseInt(prompt("숫자 입력")); // 숫자입력 창
+        var num = Math.floor(Math.random()*10)+1 // 랜덤범위 설정 1~10
+        if(sum <= 10 && sum >= 1){ // 1보다 크고 10보다 작은 식
+            if( sum == num ){ // 입력값과 랜덤값이 같을경우
+                document.write ("나 : " + sum + " , 컴 : " + num + " 지뢰 밟음.. 사망 " + "<br>");
+            } else{ // 입력값과 랜덤값이 다를경우
+                document.write ("나 : " + sum + " , 컴 : " + num + " 회피 성공!!" + "<br>" );
+            }
+        } else{ // 기준과 다르게 입력 시 경고창
+            alert("1부터 10까지 입력주세요.")
+            i--;
+        }  
+    } */
+    /*
+    for (var i = 1; i <= 5; i++){ // 새로 갯수
+        for (var  k = 5; k >= i; k--){ // 가로 갯수
+            document.write('*')
+        }
+        document.write('<br>')
+    } */
+
+    // 비밀번호 찾기
+    // 1. 비밀번호는 총 4자리 숫자
+    // 2. 비밀번호 각 자리는 1~9중 하나
+    // 3. 비밀번호에 중복은 없음. 예) 2239 안됨
+    // 4. 4자리 숫자중 첫번째 숫자는 세번째 숫자보다 7 크다.
+    // 5. 두번째 숫자는 네번째 숫자보다 작다.
+    // 6. 비밀번호를 역순으로 한 숫자와 비밀번호를 더하면 16566이다.
+    // 7. 위 조건에 맞는 비밀번호 4자리를 출력하시오.
+    
+    for (var a = 1; a < 10; a++){
+       for (var b = 1; b < 10; b++){
+            for (var c = 1; c < 10; c++){
+                for (var d = 1; d < 10; d++){
+                    if( a != b && a != c && a != d && b != c && b != d && c != d){
+                        if(a == c + 7){
+                            if( b < d){
+                                var e = a * 1000 + b * 100 + c * 10 + d;
+                                var f = d * 1000 + c * 100 + b * 10 + a;
+                                if(e + f == 16566){
+                                    document.write("비밀번호 : " + e);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+       }
+    }
+</script>
+
 </head>
 <body>
-    
 </body>
 </html>
