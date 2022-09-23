@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-image: url( "center.png" );
+    }
+    .header{
+        display: flex;
+        align-items: center;
+    }
+    .header img{
+        color: black;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .center{
+        color: white;
+        height: 100vh;
+    }
+    .section{
+        width: 1000px;
+        /* background-color: hotpink; */
+        color: white;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .bingo{
+        text-align: center;
+    }
+    .bingo img{
+        width: 700px;
+        height: 80px;
+    }
+    .game{
+        width: 800px;
+        height: 700px;
+        margin: 0 auto;
+        padding-top: 20px;
+        color: white;
+        padding-bottom: 20px;
+    }
+    .ingame{
+        display: flex;
+        font-size: 40px;
+    }
+    .game tr td{
+        border: 3px solid orange;
+        height: 50px;
+        width: 80px;
+    }
+    button{
+        height: 40px;
+        width: 300px;
+        font-size: 25px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+</style>
+<body>
+    <body onload="start()">
+        <div class="container">
+            <div class="header">
+                <img src="logo.png">
+            </div>
+            <div class="center">
+                <div class="section">
+                    <div class="bingo">
+                        <div class="ingame">
+                            <div>
+                                결과
+                            </div>
+                            <table class="game">
+                                <tr class="game1">
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr class="game1">
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td>10</td>
+                                </tr>
+                                <tr class="game1">
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr class="game1">
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr class="game1">
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>100</td>
+                                </tr>
+                            </table>
+                            <div>
+                                결과
+                            </div>
+                        </div>
+                        <button>시작하기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
