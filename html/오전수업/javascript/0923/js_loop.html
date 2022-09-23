@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    // do~while : 조건식이 참 거짓 상관없이 내용먼저 실행
+    // 초기값 -> 반복내용 실행 -> 증감식 -> 조건식 -> 내용 -> 증감식 -> 조건식
+
+    // for , while
+    // 초기값 -> 조건식 -> 내용 -> 증감식 -> 조건식 -> 내용 -> 증감식 -> 조건식
+    /*
+    var i = 10;
+    while(i < 10){
+        alert("while문");
+        i++;
+    }
+
+    var k = 10;
+    do{
+        alert("do while");
+        k++;
+    }while(k < 10);
+
+    var num = 0;
+    do{
+        alert ('1~5 중에서 입력')
+        num = parseInt(prompt());
+    }while(!(num >= 1 && num <=5));
+    document.write(num); */
+/*
+    var num1 = parseInt(prompt());
+    while (num1 < 1 || num1 > 5){
+        num1 = parseInt(prompt());
+    }
+    document.write(num1);
+*/
+
+// 1. 변수 - 단일 값을 저장하기위한 메모리 공간
+// 2. 배열 - n개의 데아터를 저장하기위한 메모리공간
+// 2-2. 배열은 인덱스로 표현한다. 인덱스는 0부터 시작이다. (대괄호 arr[0])
+
+    var arr = new Array();  // [배열 방법 배열 이란?]
+    var arr2 = [];
+    var arr3 = [1,10,32,54];
+
+    arr.push(10); // push : 배열에 데이터를 저장 하겠다.
+    arr.push(30);
+    arr.push(2323);
+
+    alert(arr[2]); //인덱스 (대괄호 [0])
+
+    var num = 10;
+    num = '문자열';
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>
