@@ -76,7 +76,7 @@
     <body>
         <div class="container">
             <div class="header">
-                <img src="logo.png">
+                <a href="bingo.html"><img src="logo.png"></a>
             </div>
             <div class="center">
                 <div class="section">
@@ -85,36 +85,36 @@
                             <div>
                                 결과
                             </div>
-                            <table class="game" onload="bingo()">
-                                <tr id="game1">
-                                    <td id="game01"></td>
-                                    <td id="game02"></td>
-                                    <td id="game03"></td>
-                                    <td id="game04"></td>
-                                    <td id="game05"></td>
+                            <table class="game">
+                                <tr id="game_1">
+                                    <td id="game1"></td>
+                                    <td id="game2"></td>
+                                    <td id="game3"></td>
+                                    <td id="game4"></td>
+                                    <td id="game5"></td>
                                 </tr>
-                                <tr id="game2">
-                                    <td id="game06"></td>
-                                    <td id="game07"></td>
-                                    <td id="game08"></td>
-                                    <td id="game09"></td>
+                                <tr id="game_2">
+                                    <td id="game6"></td>
+                                    <td id="game7"></td>
+                                    <td id="game8"></td>
+                                    <td id="game9"></td>
                                     <td id="game10"></td>
                                 </tr>
-                                <tr id="game3">
+                                <tr id="game_3">
                                     <td id="game11"></td>
                                     <td id="game12"></td>
                                     <td id="game13"></td>
                                     <td id="game14"></td>
                                     <td id="game15"></td>
                                 </tr>
-                                <tr id="game4">
+                                <tr id="game_4">
                                     <td id="game16"></td>
                                     <td id="game17"></td>
                                     <td id="game18"></td>
                                     <td id="game19"></td>
                                     <td id="game20"></td>
                                 </tr>
-                                <tr id="game5">
+                                <tr id="game_5">
                                     <td id="game21"></td>
                                     <td id="game22"></td>
                                     <td id="game23"></td>
@@ -133,12 +133,22 @@
         </div>
 </body>
 <script>
-    var game1 = document.getElementById("game01");
     function start(){
-    var bingo1 = Math.floor(Math.random()*100)+1;
-        if( bingo1 > 0){
-            game1.innerHTML = bingo1;
+        for(var i=1;i<26;i++){
+            var game = document.getElementById("game"+i);
+            var bingo = Math.floor(Math.random()*100)+1;
+            game.innerHTML = bingo;
         }
     }
+    /*function start(){
+        for (var i = 0; i < 26; i++) {
+            if (n === "game"+i) {
+                return true;
+            }
+        }
+        return false;
+    }
+    return "game"+i;*/
+
 </script>
 </html>
