@@ -73,7 +73,7 @@
     }
 </style>
 <body>
-    <body onload="start()">
+    <body>
         <div class="container">
             <div class="header">
                 <img src="logo.png">
@@ -85,51 +85,60 @@
                             <div>
                                 결과
                             </div>
-                            <table class="game">
-                                <tr class="game1">
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
+                            <table class="game" onload="bingo()">
+                                <tr id="game1">
+                                    <td id="game01"></td>
+                                    <td id="game02"></td>
+                                    <td id="game03"></td>
+                                    <td id="game04"></td>
+                                    <td id="game05"></td>
                                 </tr>
-                                <tr class="game1">
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                    <td>10</td>
+                                <tr id="game2">
+                                    <td id="game06"></td>
+                                    <td id="game07"></td>
+                                    <td id="game08"></td>
+                                    <td id="game09"></td>
+                                    <td id="game10"></td>
                                 </tr>
-                                <tr class="game1">
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
+                                <tr id="game3">
+                                    <td id="game11"></td>
+                                    <td id="game12"></td>
+                                    <td id="game13"></td>
+                                    <td id="game14"></td>
+                                    <td id="game15"></td>
                                 </tr>
-                                <tr class="game1">
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
+                                <tr id="game4">
+                                    <td id="game16"></td>
+                                    <td id="game17"></td>
+                                    <td id="game18"></td>
+                                    <td id="game19"></td>
+                                    <td id="game20"></td>
                                 </tr>
-                                <tr class="game1">
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>100</td>
+                                <tr id="game5">
+                                    <td id="game21"></td>
+                                    <td id="game22"></td>
+                                    <td id="game23"></td>
+                                    <td id="game24"></td>
+                                    <td id="game25"></td>
                                 </tr>
                             </table>
                             <div>
                                 결과
                             </div>
                         </div>
-                        <button>시작하기</button>
+                        <button onclick="start()">시작하기</button>
                     </div>
                 </div>
             </div>
         </div>
 </body>
+<script>
+    var game1 = document.getElementById("game01");
+    function start(){
+    var bingo1 = Math.floor(Math.random()*100)+1;
+        if( bingo1 > 0){
+            game1.innerHTML = bingo1;
+        }
+    }
+</script>
 </html>
