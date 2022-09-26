@@ -175,6 +175,11 @@
 
     var start_bt = document.getElementById("go");
     function start(){
+        for(var i=1; i<26; i++){
+            var game = document.getElementById("game"+i);
+            game.style.color="white"
+            game.style.background='none'
+        }
         for(var i=1;i<26;i++){
             var game = document.getElementById("game"+i);
             var bingo = Math.floor(Math.random()*100)+1;
