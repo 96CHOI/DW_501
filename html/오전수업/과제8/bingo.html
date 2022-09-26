@@ -48,7 +48,7 @@
     }
     .game{
         width: 800px;
-        height: 700px;
+        height: 600px;
         margin: 0 auto;
         padding-top: 20px;
         color: white;
@@ -57,6 +57,7 @@
     .ingame{
         display: flex;
         font-size: 40px;
+        position: relative;
     }
     .game tr td{
         border: 3px solid orange;
@@ -67,9 +68,34 @@
         height: 40px;
         width: 300px;
         font-size: 25px;
+        margin-top: 20px;
     }
     button:hover{
         cursor: pointer;
+    }
+    audio {
+        display: block;
+        margin: 10px 0 0 5px
+    }
+    #gong{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    #gong img{
+        width: 1000px;
+        height: 900px;
+    }
+    .game tr td:hover{
+        cursor: pointer;
+    }
+    .play{
+        display: flex;
+        align-items: center;
+        margin-left: 160px;
+        font-size: 20px;
+        color: red;
     }
 </style>
 <body>
@@ -87,68 +113,95 @@
                             </div>
                             <table class="game">
                                 <tr id="game_1">
-                                    <td id="game1"></td>
-                                    <td id="game2"></td>
-                                    <td id="game3"></td>
-                                    <td id="game4"></td>
-                                    <td id="game5"></td>
+                                    <td id="game1" onclick="user(1)"></td>
+                                    <td id="game2" onclick="user(2)"></td>
+                                    <td id="game3" onclick="user(3)"></td>
+                                    <td id="game4" onclick="user(4)"></td>
+                                    <td id="game5" onclick="user(5)"></td>
                                 </tr>
                                 <tr id="game_2">
-                                    <td id="game6"></td>
-                                    <td id="game7"></td>
-                                    <td id="game8"></td>
-                                    <td id="game9"></td>
-                                    <td id="game10"></td>
+                                    <td id="game6" onclick="user(6)"></td>
+                                    <td id="game7" onclick="user(7)"></td>
+                                    <td id="game8" onclick="user(8)"></td>
+                                    <td id="game9" onclick="user(9)"></td>
+                                    <td id="game10" onclick="user(10)"></td>
                                 </tr>
                                 <tr id="game_3">
-                                    <td id="game11"></td>
-                                    <td id="game12"></td>
-                                    <td id="game13"></td>
-                                    <td id="game14"></td>
-                                    <td id="game15"></td>
+                                    <td id="game11" onclick="user(11)"></td>
+                                    <td id="game12" onclick="user(12)"></td>
+                                    <td id="game13" onclick="user(13)"></td>
+                                    <td id="game14" onclick="user(14)"></td>
+                                    <td id="game15" onclick="user(15)"></td>
                                 </tr>
                                 <tr id="game_4">
-                                    <td id="game16"></td>
-                                    <td id="game17"></td>
-                                    <td id="game18"></td>
-                                    <td id="game19"></td>
-                                    <td id="game20"></td>
+                                    <td id="game16" onclick="user(16)"></td>
+                                    <td id="game17" onclick="user(17)"></td>
+                                    <td id="game18" onclick="user(18)"></td>
+                                    <td id="game19" onclick="user(19)"></td>
+                                    <td id="game20" onclick="user(20)"></td>
                                 </tr>
                                 <tr id="game_5">
-                                    <td id="game21"></td>
-                                    <td id="game22"></td>
-                                    <td id="game23"></td>
-                                    <td id="game24"></td>
-                                    <td id="game25"></td>
+                                    <td id="game21" onclick="user(21)"></td>
+                                    <td id="game22" onclick="user(22)"></td>
+                                    <td id="game23" onclick="user(23)"></td>
+                                    <td id="game24" onclick="user(24)"></td>
+                                    <td id="game25" onclick="user(25)"></td>
                                 </tr>
                             </table>
                             <div>
                                 결과
                             </div>
+                            <div id="gong">
+                                <img src="" id="ggam" alt="" onclick="nol()">
+                            </div>
                         </div>
-                        <button onclick="start()">시작하기</button>
+                        <button id="wow" onclick="start1()">시작하기?</button>
+                        <a href="bingo.html"><button id="restart">다시하기</button></a>
+                        <button onclick="start()" id="go">시작하기</button>
+                        <br>
+                        <div class="play">
+                            먼저 음악을 재생 후 게임을 진행해주세요! -->
+                            <audio controls loop>
+                                <source src="gongfor.mp3" type="audio/mpeg">
+                            </audio>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 </body>
 <script>
+    document.getElementById('gong').style.display = "none"; //id가 gong인 태그를 숨기다.
+
+    var start_bt = document.getElementById("go");
     function start(){
         for(var i=1;i<26;i++){
             var game = document.getElementById("game"+i);
             var bingo = Math.floor(Math.random()*100)+1;
+            for(var j=1; j<i; j++){
+                var bingoNum = document.getElementById("game"+j);
+                if(bingoNum.innerHTML == bingo){
+                    i--;
+                    break;
+                }
+            }
             game.innerHTML = bingo;
         }
     }
-    /*function start(){
-        for (var i = 0; i < 26; i++) {
-            if (n === "game"+i) {
-                return true;
-            }
-        }
-        return false;
+    function start1(){
+        var imgDiv = document.getElementById("gong");
+        var gongpo = document.getElementById("ggam");
+        gongpo.src = "gongpo.png"
+        imgDiv.style.display = "block"
     }
-    return "game"+i;*/
-
+    function nol(){
+        document.getElementById('gong').style.display = "none";
+    }
+    function user(a){
+        var game = document.getElementById("game"+a);
+        game.style.color="red"
+        game.style.background='red'
+    }
+    
 </script>
 </html>
