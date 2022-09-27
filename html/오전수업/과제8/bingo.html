@@ -156,7 +156,7 @@
                             </div>
                         </div>
                         <button id="wow" onclick="start1()">시작하기?</button>
-                        <a href="bingo.html"><button id="restart">다시하기</button></a>
+                        <button id="restart" onclick="restart()">다시하기</button>
                         <button onclick="start()" id="go">시작하기</button>
                         <br>
                         <div class="play">
@@ -172,14 +172,11 @@
 </body>
 <script>
     document.getElementById('gong').style.display = "none"; //id가 gong인 태그를 숨기다.
-
+    var imgDiv = document.getElementById("gong");
+    var gongpo = document.getElementById("ggam");
     var start_bt = document.getElementById("go");
-    function start(){
-        for(var i=1; i<26; i++){
-            var game = document.getElementById("game"+i);
-            game.style.color="white"
-            game.style.background='none'
-        }
+
+    function start(){ //랜덤숫자 (중복 거르기)
         for(var i=1;i<26;i++){
             var game = document.getElementById("game"+i);
             var bingo = Math.floor(Math.random()*100)+1;
@@ -193,16 +190,27 @@
             game.innerHTML = bingo;
         }
     }
-    function start1(){
-        var imgDiv = document.getElementById("gong");
-        var gongpo = document.getElementById("ggam");
+    function restart(){ // 색깔없애고 다시
+        for(var i=1; i<26; i++){
+            var game = document.getElementById("game"+i);
+            game.style.color="white"
+            game.style.background='none'
+        }
+    }
+    function bingo(){//게임 플레이 룰 반응
+        var game = document.getElementById("game"+i);
+
+    }
+    function start1(){ //깜놀사진
+        // var imgDiv = document.getElementById("gong");
+        // var gongpo = document.getElementById("ggam");
         gongpo.src = "gongpo.png"
         imgDiv.style.display = "block"
     }
-    function nol(){
+    function nol(){//클릭시 사라짐 사진
         document.getElementById('gong').style.display = "none";
     }
-    function user(a){
+    function user(a){//클릭시 반응
         var game = document.getElementById("game"+a);
         game.style.color="red"
         game.style.background='red'
