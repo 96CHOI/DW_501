@@ -176,21 +176,190 @@
     var imgDiv = document.getElementById("gong");
     var gongpo = document.getElementById("ggam");
     var start_bt = document.getElementById("go");
-
+    var isNum = false;
+    var array = new Array();
     function start(){ //랜덤숫자 (중복 거르기)
+        col_count = 0;
+        row_count = 0;
         for(var i=1;i<26;i++){
+            isNum = false;
             var game = document.getElementById("game"+i);
             var bingo = Math.floor(Math.random()*100)+1;
             for(var j=1; j<i; j++){
                 var bingoNum = document.getElementById("game"+j);
                 if(bingoNum.innerHTML == bingo){
                     i--;
+                    isNum = true;
                     break;
                 }
             }
-            game.innerHTML = bingo;
+            if(!isNum){
+                game.innerHTML = bingo;
+                array[i-1] = bingo;
+            }
+        }
+        for(var i=1; i<26; i++){
+            var game = document.getElementById("game"+i);
+            game.style.color="white"
+            game.style.background='none'
         }
     }
+    function user(a){//클릭시 반응
+        var score = 0;
+        var game = document.getElementById("game"+a);
+        
+        game.style.color="red"
+        game.style.background='red'
+        score = game.innerHTML;
+        for(var i=0; i<array.length; i++){
+            if(array[i] == score){
+                bingo_ck();
+            }
+        } 
+    }
+    var col_count = 0;
+    var row_count = 0;
+    function bingo_ck(){
+        var audio1= new Audio('scream.mp3');
+        audio1.currentTime = 0;
+
+        col_count = 0;
+        row_count = 0;
+        // 가로 줄 빙고
+        for(var i=1; i<6; i++){
+            color = document.getElementById("game"+i);
+            if(color.style.background == "red"){
+                col_count++;
+                if(col_count == 5){
+                    audio1.play();
+                    alert("1번 가로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        col_count = 0;
+
+        for(var i=6; i<11; i++){
+            color = document.getElementById("game"+i);
+            if(color.style.background == "red"){
+                col_count++;
+                if(col_count == 5){
+                    audio1.play();
+                    alert("2번 가로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        col_count = 0;
+
+        for(var i=11; i<16; i++){
+            color = document.getElementById("game"+i);
+            if(color.style.background == "red"){
+                col_count++;
+                if(col_count == 5){
+                    audio1.play();
+                    alert("3번 가로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        col_count = 0;
+        for(var i=16; i<21; i++){
+            color = document.getElementById("game"+i);
+            if(color.style.background == "red"){
+                col_count++;
+                if(col_count == 5){
+                    audio1.play();
+                    alert("4번 가로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        col_count = 0;
+        for(var i=21; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(color.style.background == "red"){
+                col_count++;
+                if(col_count == 5){
+                    audio1.play();
+                    alert("5번 가로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        col_count = 0;
+        // 세로 줄 빙고
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 5 == 1)
+            if(color.style.background == "red"){
+                row_count++;
+                if(row_count == 5){
+                    audio1.play();
+                    alert("1번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        row_count = 0;
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 5 == 2)
+            if(color.style.background == "red"){
+                row_count++;
+                if(row_count == 5){
+                    audio1.play();
+                    alert("2번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        row_count = 0;
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 5 == 3)
+            if(color.style.background == "red"){
+                row_count++;
+                if(row_count == 5){
+                    audio1.play();
+                    alert("3번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        row_count = 0;
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 5 == 4)
+            if(color.style.background == "red"){
+                row_count++;
+                if(row_count == 5){
+                    audio1.play();
+                    alert("4번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        row_count = 0;
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 5 == 0)
+            if(color.style.background == "red"){
+                row_count++;
+                if(row_count == 5){
+                    audio1.play();
+                    alert("5번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        row_count = 0;
+        // 대각 줄 빙고
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 5 == 6)
+            if(color.style.background == "red"){
+                row_count++;
+                if(row_count == 5){
+                    audio1.play();
+                    alert("5번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        row_count = 0;
+    }
+
+
     function restart(){ // 색깔없애고 다시
         for(var i=1; i<26; i++){
             var game = document.getElementById("game"+i);
@@ -200,22 +369,13 @@
     }
     function bingo(){//게임 플레이 룰 반응
         var game = document.getElementById("game"+i);
-
     }
     function start1(){ //깜놀사진
-        // var imgDiv = document.getElementById("gong");
-        // var gongpo = document.getElementById("ggam");
         gongpo.src = "gongpo.png"
         imgDiv.style.display = "block"
     }
     function nol(){//클릭시 사라짐 사진
         document.getElementById('gong').style.display = "none";
-    }
-    function user(a){//클릭시 반응
-        var game = document.getElementById("game"+a);
-        game.style.color="red"
-        game.style.background='red'
-    }
-    
+    } 
 </script>
 </html>
