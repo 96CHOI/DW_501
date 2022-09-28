@@ -98,19 +98,15 @@
         color: red;
     }
 </style>
-<body>
     <body>
         <div class="container">
             <div class="header">
-                <a href="bingo.html"><img src="logo.png"></a>
+                <a href="index.html"><img src="logo.png"></a>
             </div>
             <div class="center">
                 <div class="section">
                     <div class="bingo">
                         <div class="ingame">
-                            <div>
-                                결과
-                            </div>
                             <table class="game">
                                 <tr id="game_1">
                                     <td id="game1" onclick="user(1)"></td>
@@ -148,39 +144,54 @@
                                     <td id="game25" onclick="user(25)"></td>
                                 </tr>
                             </table>
-                            <div>
-                                결과
-                            </div>
                             <div id="gong">
                                 <img src="" id="ggam" alt="" onclick="nol()">
                             </div>
                         </div>
-                        <button id="wow" onclick="start1()">시작하기?</button>
+                        <button id="wow" onclick="start1()">시작하기</button>
                         <button id="restart" onclick="restart()">다시하기</button>
-                        <a href="bingo.html"><button id="regame">초기화</button></a>
+                        <a href="index.html"><button id="regame">초기화</button></a>
                         <button onclick="start()" id="go">시작하기</button>
                         <br>
-                        <div class="play">
-                            먼저 음악을 재생 후 게임을 진행해주세요! -->
-                            <audio controls loop>
-                                <source src="gongfor.mp3" type="audio/mpeg">
+                        <!-- <div class="play">
+                            먼저 음악을 재생 후 게임을 진행해주세요!
+                            <audio id="asd" controls>
+                                <source src="gongfor.mp3" type="audio/mp3">
                             </audio>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </div>
 </body>
 <script>
+    var video = document.querySelector('#asd');
+    // if(video.paused){
+    //     setTimeout(function(){
+    //         video.play();
+    //     },2000);
+    // }
+
+
     document.getElementById('gong').style.display = "none"; //id가 gong인 태그를 숨기다.
     var imgDiv = document.getElementById("gong");
     var gongpo = document.getElementById("ggam");
     var start_bt = document.getElementById("go");
     var isNum = false;
     var array = new Array();
+    var ad = false;
     function start(){ //랜덤숫자 (중복 거르기)
+        ad = true
+        // if(ad == true){
+            var audio2 = new Audio('gongfor.mp3');
+            audio2.currentTime = 0;
+            audio2.play();
+            // ad = false;
+        // }
         col_count = 0;
         row_count = 0;
+        cross1 = 0;
+        cross2 = 0;
         for(var i=1;i<26;i++){
             isNum = false;
             var game = document.getElementById("game"+i);
@@ -347,16 +358,34 @@
         // 대각 줄 빙고
         for(var i=1; i<26; i++){
             color = document.getElementById("game"+i);
-            if(i % 5 == 6)
+            if(i % 6 == 1)
             if(color.style.background == "red"){
-                row_count++;
-                if(row_count == 5){
+                cross1++;
+                if(cross1 == 5){
                     audio1.play();
-                    alert("5번 세로줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                    alert("왼쪽 대각줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
                 }
             }
         }
-        row_count = 0;
+        cross1 = 0;
+
+        for(var i=1; i<26; i++){
+            color = document.getElementById("game"+i);
+            if(i % 4 == 1)
+            if(color.style.background == "red"){
+                cross2++;
+                if(i==1){
+                    cross2--;
+                } if (i==25){
+                    cross2--;
+                }
+                if(cross2 == 5){
+                    audio1.play();
+                    alert("오른쪽 대각줄 빙고 완성! 초기화하여 다시 플레이 해주세요")
+                }
+            }
+        }
+        cross2 = 0;
     }
 
 
@@ -373,6 +402,9 @@
     function start1(){ //깜놀사진
         gongpo.src = "gongpo.png"
         imgDiv.style.display = "block"
+        var audio1= new Audio('scream.mp3');
+        audio1.currentTime = 0;
+        audio1.play();
     }
     function nol(){//클릭시 사라짐 사진
         document.getElementById('gong').style.display = "none";
