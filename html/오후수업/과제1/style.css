@@ -17,6 +17,12 @@ body {
   background-position: center;
   background-size: cover;
 }
+p{
+  font-family: "궁서";
+}
+span{
+  font-family: "궁서";
+}
 .nav {
   background-color: #ae0000;
 }
@@ -65,6 +71,10 @@ body {
   height: 200px;
   object-fit: cover;
 }
+.menu:hover {
+  width: 300px;
+  height: 250px;
+}
 .menu-info {
   background-color: #fff;
   padding: 3%;
@@ -78,7 +88,6 @@ body {
 .menu-info p {
   color: #4b5156;
   font-size: 14px;
-  font-family: 'Roboto Mono', monospace;
 }
 a {
   text-decoration: none;
