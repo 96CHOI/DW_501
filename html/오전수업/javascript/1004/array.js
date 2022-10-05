@@ -32,7 +32,6 @@ function enroll() { // 시작
 
   var prop = name.value;
   item.push(prop);
-
   var price = document.getElementById("item_price");
 
   var ul = document.querySelector('#item_list');
