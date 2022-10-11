@@ -72,8 +72,7 @@ span{
   object-fit: cover;
 }
 .menu:hover {
-  width: 300px;
-  height: 250px;
+  border: 3px solid black;
 }
 .menu-info {
   background-color: #fff;
