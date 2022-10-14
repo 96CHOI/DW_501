@@ -32,7 +32,14 @@ body {
 .bt{
     width: 90%;
     margin: 10px 5%;
+    border: 0;
+    background-color: white;
 }
 .bt a{
-
+    display: block;
+    border: 2px solid#6ef3cb;
+    border-radius: 7px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
 }
