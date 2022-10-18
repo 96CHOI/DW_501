@@ -16,7 +16,7 @@ window.onload = function () {
 
     var T_put = document.getElementsByClassName("T_put");
     for (var i in T_put) {
-        T_put[i].addEventListener("keyup", function(){
+        T_put[i].addEventListener("keyup", function () {
             if (!bt_check) {
                 alert("새 세팅버튼을 추가하세요");
                 this.value = "";
@@ -26,6 +26,11 @@ window.onload = function () {
 };
 
 function add_button() {
+    if (bt_check) { // 새 버튼 생성 후 값 등록 안되었으면 새 버튼 생성 금지
+        alert("값을 먼저 등록해주세요(＃°Д°)");
+        return;
+    }
+
     var bt = document.createElement("button");
     bt.appendChild(document.createTextNode("세팅 " + (++bt_cnt)));
     bt.setAttribute("data-value", "0");
@@ -39,12 +44,26 @@ function add_button() {
     document.getElementsByClassName("add_wrap")[0].appendChild(bt);
     bt_check = true;
 };
-function table_draw(obj){
+function table_draw(obj) {
     var draw = document.querySelector("#draw");
 
-    var data = tb_list[parseInt(obj.dataset.value)-1];
-    
-    draw.innerHTML = data.col + " " + data.row + " " + data.width + " " + data.height;
+    var data = tb_list[parseInt(obj.dataset.value) - 1];
+
+    var out = "<table border = 1>";
+    for (var i = 1; i <= data.col; i++) {
+        out += "<tr>";
+        for (var k = 1; k <= data.row; k++) {
+            out += "<td width = " + data.width + " height = " + data.height + "></td>";
+        }
+
+        out += "</tr>";
+    }
+
+    out += "</table>";
+
+    // draw.innerHTML = data.col + " " + data.row + " " + data.width + " " + data.height;
+    draw.innerHTML = out;
+
 }
 function value_save(obj) {
     var input_label = ["행", "열", "너비", "높이"]
