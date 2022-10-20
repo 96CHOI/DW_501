@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- HTML 문서
+	1. html_set.html
+	2. index.html
+
+	html_set.html 에서 배경색, 글씨크기를 쿠키에 저장하기
+	input을 이용하여 배경색과 글씨크기 입력후
+	쿠키저장 버튼 클릭하면 쿠키로 저장
+	배경색 쿠키 이름 : bg
+	글씨 크기 쿠키 이름 : fontSize
+
+	index.html 문서를 열었을때 쿠키에 저장되어있는 값으로 배경색과
+	글씨 크기가 적용되어야 함
+	
+	글씨크기 적용 여부 보기위해 index.html에 <p> 테스트 </p> 작성 -->
+</head>
+<body>
+    <p> 테스트 </p>
+</body>
+</html>
+<script>
+var bg = getCookie("bg");
+var size = getCookie("fontSize");
+document.bgColor=bg;
+document.body.style.fontSize=size+"px";
+
+function getCookie(name){
+    name = name+"=";
+    let decode_cook = decodeURIComponent(document.cookie);
+    let temp = decode_cook.split(';');
+    for(let i =0; i<temp.length; i++){
+        let c = temp[i];
+        while(c.charAt(0) == ' '){
+            c =c.substring(1);
+        }
+        if (c.indexOf(name) == 0){
+            return c.substring(name.length,c.length);
+        }
+    }
+}
+
+</script>
