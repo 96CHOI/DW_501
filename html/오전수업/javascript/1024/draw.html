@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="1900" height="940"></canvas>
+</body>
+</html>
+<script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext('2d');
+
+    // 사각형 굴뚝
+    ctx.fillStyle="#720000";
+    ctx.fillRect(600, 220, 90, 300);
+
+    // 사각형 집 몸통
+    ctx.fillStyle='green';
+    ctx.fillRect(600, 400, 700, 500);
+
+    //삼각형 지붕
+    ctx.fillStyle='#FFBB00';
+    ctx.beginPath(); // 선 시작
+    ctx.moveTo(1300,400); //오른쪽
+    ctx.lineTo(950,100); // 위
+    ctx.lineTo(600,400); // 왼쪽
+    ctx.closePath(); // 선 종료
+    ctx.fill();
+
+    // 원 연기
+    ctx.beginPath();
+    ctx.arc(460,60,15,0,2*Math.PI,true); // 원1 가로 세로 크키
+    ctx.arc(520,100,25,0,2*Math.PI,true); // 원2 가로 세로 크키
+    ctx.closePath();
+    ctx.fillStyle="skyblue";
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.arc(600,150,35,0,2*Math.PI,true); // 원3 가로 세로 크키
+    ctx.closePath();
+    ctx.fillStyle="skyblue";
+    ctx.fill();
+
+
+
+
+</script>

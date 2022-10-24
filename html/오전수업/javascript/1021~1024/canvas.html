@@ -33,13 +33,19 @@
     ctx.moveTo(100, 100); //시작점
     ctx.lineTo(500, 50); //종료점
 
-    ctx.moveTo(300, 300); //시작점
-    ctx.lineTo(400, 300); //종료점
-    ctx.lineTo(350, 400); //종료점
-
+    ctx.moveTo(100, 300); //시작점
+    ctx.lineTo(300, 300); //종료점
+    ctx.lineTo(250, 100); //종료점
 
     ctx.closePath();
     ctx.stroke();
 
-
+    //원
+    ctx.beginPath();
+    ctx.arc(500,500,50,0,2*Math.PI,true);
+    ctx.closePath();
+    ctx.fillStyle="pink";
+    ctx.fill();
+    ctx.stroke();
+    
 </script>
