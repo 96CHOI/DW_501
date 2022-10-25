@@ -1,0 +1,30 @@
+
+#wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#main-section{
+    order: 1;
+    /* order 번호가 낮을수록 먼저 실행됨 */
+    width: 100%;
+    background-color: #183786;
+}
+.page-title{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 90%;
+    padding: 5% 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+@media all and (min-width: 780px){
+    html{ font-size: 20px; }
+}
+/* PC */
+@media all and (min-width : 960px){
+    html{ font-size: 24px; }
+}
