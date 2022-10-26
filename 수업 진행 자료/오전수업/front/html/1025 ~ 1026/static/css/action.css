@@ -38,13 +38,28 @@
 .imgb1{
     width: 36%;
     background-color: hotpink;
+    font-size: 5vmin;
 }
 .imgb2{
     width: 64%;
     background: #478899;
+    font-size: 3vh;
 }
 .image-box{
     height: 350px;
+}
+
+#multi-section{
+    width: 100%;
+}
+#multi-section>div{
+    width: 90%;
+    display: inline-block;
+}
+#multi-section img, #multi-section video{
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 /* 태블릿 */
