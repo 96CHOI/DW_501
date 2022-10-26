@@ -21,6 +21,11 @@
       <option value="episode">episode</option>
     </select>
     <button onclick="doSearch()">영화 검색</button>
+
+    <h3 id="movieTitle"></h3>
+    <p>개봉년도 : <span id="year"></span></p>
+    <p>영화 고유번호(PK) : <span id="movieId"></span></p>
+    <p>영화 포스터 : <span id="Poster"></span></p>
   </body>
   <!-- Jquery CDN Download -->
   <script
@@ -64,8 +69,32 @@
         dataType: 'json',
         success: function (response) {
           console.log(response);
+          console.log(response.Search[0].Title);
+          console.log(response.Search[0].imdbID);
+          //Crazy, Stupid, Love. 고유 아이디 출력하기
+          var movieTitle = response.Search[0].Title;
+          var Year = response.Search[0].Year;
+          var imdbID = response.Search[0].imdbID;
+          $('#movieTitle').append(movieTitle); // 영화제목
+          $('#year').append(Year); // 개봉년도
+          $('#movieId').append(imdbID); // 영화고유 아이디(PK)
+          var html = '<img src="' + response.Search[0].Poster + '">';
+          $('#Poster').append(html);
+
+          // append : 추가하다.
         },
       });
     }
   </script>
 </html>
+
+<!-- ? 는 프로그래밍에서 파라미터와 같은 역할을 함. -->
+<!-- ? : 쿼리스트링 -->
+<!-- = : 대입연산자 -->
+<!-- & = , (comma) -->
+
+<!-- & => , 와 같은 뜻. -->
+
+<!-- 파라미터 값 총 몇개 : 3
+파라미터 값 : apikey, s, type
+데이터 : xx, love, movie -->
