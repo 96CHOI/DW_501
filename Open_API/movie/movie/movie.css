@@ -6,15 +6,21 @@ body {
 }
 
 .container {
-  width: 100%;
   height: auto;
-  background-color: chocolate;
-  margin: 50px auto;
+  background-color: lightgray;
+  margin: 20px auto;
+  padding: 20px;
 }
 
 .title {
   text-align: center;
   font-size: 42px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 22px;
+}
+.year {
+  text-align: center;
 }
 
 .movie-row {
@@ -30,6 +36,7 @@ body {
 
 .item {
   flex-basis: 17%;
+  cursor: pointer;
 }
 
 .poster {
