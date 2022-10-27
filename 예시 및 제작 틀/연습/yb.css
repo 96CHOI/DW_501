@@ -9,7 +9,7 @@ body {
     position: relative;
     /* background: #00F260;
     background: -webkit-linear-gradient(to right, #0575E6, #00F260); */
-    background: linear-gradient(to right, #0575E6, #00F260);
+    /* background: linear-gradient(to right, #0575E6, #00F260); */
 
 
 }
@@ -115,7 +115,7 @@ body {
 }
 
 #main_menu>li:hover {
-    color: white;
+    color: #005AAE;
     cursor: pointer;
     transition: all 0.8s ease-out;
 }
@@ -159,6 +159,9 @@ body {
     margin-top: 150px;
     align-items: center;
     padding-bottom: 10px;
+    background-color: beige;
+    border-radius: 10px;
+    border: 1px solid beige;
 }
 .login_box{
     display: flex;
