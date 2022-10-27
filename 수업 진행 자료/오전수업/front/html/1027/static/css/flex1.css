@@ -1,0 +1,41 @@
+.flex {
+  display: flex;
+  width: 90%;
+  height: 50px;
+  margin: 30px auto;
+  border: 2px solid black;
+}
+.flex div {
+  width: 20%;
+  height: 50px;
+}
+.flex div:nth-child(1) {
+  background-color: red;
+}
+.flex div:nth-child(2) {
+  background-color: yellow;
+}
+.flex div:nth-child(3) {
+  background-color: blue;
+}
+
+#flex1 {
+  justify-content: flex-start;
+  /* 왼쪽으로 정렬 */
+}
+#flex2 {
+  justify-content: flex-end;
+  /* 오른쪽으로 정렬 */
+}
+#flex3 {
+  justify-content: center;
+  /* 가운데 정렬 */
+}
+#flex4 {
+  justify-content: space-between;
+  /* 빈공간 있을 시 양쪽을 채우며 일정간격으로 배치 */
+}
+#flex5 {
+  justify-content: space-around;
+  /* 빈공간 있을 시 양쪽을 비워두며 일정간격으로 배치 */
+}
