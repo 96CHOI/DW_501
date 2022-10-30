@@ -1,0 +1,45 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 메인 head , title */
+.main_head{
+    padding: 30px 0;
+    height: 300px;
+    text-align: center;
+    background: #6462;
+}
+.logo{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+.main_title{
+    position: relative;
+    padding-top: 10px;
+}
+.main_title::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 100px;
+    height: 1px;
+    margin-left: -50px;
+    background: #455964;
+}
+.main_title h2{
+    color: #455964;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+.main_title p{
+    display: block;
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 500;
+}
