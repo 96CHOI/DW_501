@@ -131,7 +131,9 @@ input {
   padding-left: 5px;
   font-family: "NanumSquare", sans-serif;
 }
-
+input:hover{
+  cursor: pointer;
+}
 .bi {
   opacity: 0.5;
 }
@@ -148,6 +150,9 @@ input {
   border-left: none;
   background-color: lightgray;
   padding-top: 10px;
+}
+#order:hover{
+  cursor: pointer;
 }
 
 .bt {
