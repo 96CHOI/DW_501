@@ -1,0 +1,131 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #6462;
+}
+/* 메인 head , title */
+.main_head{
+    padding: 30px 0;
+    text-align: center;
+}
+.logo{
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+.main_title{
+    position: relative;
+    padding-top: 10px;
+}
+.main_title::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 100px;
+    height: 1px;
+    margin-left: -50px;
+    background: #455964;
+}
+.main_title h2{
+    color: #455964;
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: 500;
+    font-family: 'NanumSquare', sans-serif;
+}
+.main_title p{
+    display: block;
+    margin-top: 10px;
+    color: #aaa;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+    font-family: 'NanumSquare', sans-serif;
+}
+/* 메뉴 리스트 */
+.main_item{
+    width: 1280px;
+    margin: 0 auto;
+    padding: 20px 0 80px;
+    overflow: hidden;
+}
+.row{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+}
+.gallery-col{
+    position: relative;
+}
+.gallery-col img{
+    border-radius: 10px;
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+}
+.layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 250px;
+    height: 400px;
+}
+.layer h3{
+    transition: 0.6s;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    font-size: 20px;
+    color: rgba(46, 49, 49, 1);
+    text-align: center;
+}
+.layer:hover{
+    cursor: pointer;
+    background-color: rgba(232, 232, 232, 0.9);
+}
+.layer:hover h3{
+    opacity: 1;
+    bottom: 50%;
+}
+/* footwrap */
+
+#footwrap{
+    border-top: 1px solid #455964;
+    margin-top: 30px;
+}
+#foot{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 15px 0 15px;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#foot address{
+    color: #455964;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 300;
+    font-style: normal;
+}
+#foot address span{
+    display: inline-block;
+}
+#foot .copyright{
+    margin-top: 5px;
+    color: #090909;
+    font-size: 11px;
+    line-height: 13px;
+}
+.foot_logo{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

@@ -1,12 +1,14 @@
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'NanumSquare', sans-serif;
     position: relative;
-    background-image: url(../연습/img/배경.jpg);
+    /* background-image: url(../연습/img/배경.jpg); */
 }
 
 .container {
@@ -17,7 +19,7 @@ body {
 }
 
 .top_menu {
-    border-bottom: 1px solid lightgray;
+    /* border-bottom: 1px solid lightgray; */
 }
 
 .all_header {
@@ -51,12 +53,12 @@ body {
 }
 
 #logo_menu_wrap {
-    border-bottom: 1px solid lightgray;
+    /* border-bottom: 1px solid lightgray; */
     display: flex;
 }
 
 #logo_menu {
-    width: 1400px;
+    width: 1300px;
     height: 120px;
     display: flex;
     margin: 0 auto;
@@ -78,81 +80,72 @@ body {
     cursor: pointer;
 }
 
-#menu {
-    width: 1400px;
-    height: 110px;
-    position: relative;
+#menu{
+    width: 1200px;
 }
-
-#menu ul {
-    list-style: none;
+#menu_list{
+    list-style-type: none;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+    width: 800px;
+    height: 120px;
+}
+#menu_list li{
+    float: left;
+    height: 80px;
+    line-height: 98px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+#menu_list li ul{
     padding: 0;
     margin: 0;
+    width: 0;
+    height: 0;
     position: relative;
-}
-
-#main_menu {
+    opacity: 0;
     list-style: none;
-    width: 1000px;
-    position: relative;
 }
-
-#main_menu>li {
+#menu_list li ul li{
+    width: 0;
+    height: 0;
+    position: absolute;
+    line-height: 0;
+    top: -10px;
+}
+#menu_list li:hover ul{
+    position: relative;
+    opacity: 0.7;
+    background-color: lightgray;
     width: 200px;
-    float: left;
-    line-height: 120px;
-    text-align: center;
-    position: relative;
-    /* color: white; */
-    font-weight: bold;
-    font-family: 'NanumSquare', sans-serif;
-    font-size: 22px;
+    top: 10px;
+    z-index: 100;
+    cursor: pointer;
 }
-#main_menu>p{
+
+
+#menu_list li:hover ul li{
+    position: relative;
+    background-color: lightgray;
     width: 200px;
-    float: left;
-    line-height: 115px;
     text-align: center;
-    position: relative;
-    /* color: white; */
-    font-weight: bold;
-    font-family: 'NanumSquare', sans-serif;
-    font-size: 22px;
-}
-#main_menu>li:hover {
-    color: white;
+    line-height: 40px;
+    height: 50px;
     cursor: pointer;
-    transition: all 0.8s ease-out;
-}
-
-#main_menu .sub {
-    /* display: none; => 브라우저에서 어떻게 보이게 할거냐? (안보임) */
-    display: none;
-}
-
-#main_menu:hover .sub {
-    display: block;
-    background: #005AAE;
-    opacity: 0.8;
-    height: 300px;
-    color: white;
-    font-family: 'NanumSquare', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 1;
-}
-#main_menu:hover .sub li{
-    line-height: 70px;
 }
 #global_wrap{
     /* width: 1000px; */
     margin: 0 auto;
-    height: 120px;
+    margin-top: 20px;
+    height: 80px;
 }
 #util{
-    width: 300px;
+    width: 250px;
     list-style-type: none;
+    align-items: flex-end;
 }
 #util li{
     float: left;
@@ -164,21 +157,25 @@ body {
 }
 a{
     text-decoration: none;
-    color: white;
+    color: black;
+    font-weight: bold;
 }
 #util li:nth-child(1){
     border: 0px;
 }
 /* ==================센터=================== */
 .center{
-    flex-basis: 60%;
+    flex-basis: 100%;
     /* 아이템도 flex가 될 수 있다. */
     display: flex;
     justify-content: space-between;
 }
 .footer{
-    flex-basis: 20%;
-    color: #fff;
+    background-color: black;
+    color: black;
+}
+.footer img{
+   width: 1900px ; 
 }
 .section{
     flex-basis: 100%;  
@@ -186,10 +183,11 @@ a{
     flex-direction: column;
     justify-content: space-around;
     padding-top: 5%;
+    background-image: url(../연습/img/배경.jpg);
+    background-size: 1920px 849px;
+    
 }
 .section img{
-    width: 1900px;
-}
-.article{
-    flex-basis: 100%;
+    width: 1000px;
+    margin-left: 800px;
 }
