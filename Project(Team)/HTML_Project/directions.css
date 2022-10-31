@@ -86,6 +86,9 @@ body {
 .directions {
   opacity: 1;
 }
+.home{
+    float: right;
+}
 /* 내용 */
 .section {
   border-top: 1px solid #eee;
