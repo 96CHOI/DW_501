@@ -72,6 +72,7 @@ body {
   background-color: #464646;
   opacity: 0.5;
   font-weight: bold;
+  font-family: "NanumSquare", sans-serif;
   color: white;
   margin-right: 10px;
 }
@@ -83,11 +84,11 @@ body {
   cursor: pointer;
   opacity: 1;
 }
-.About_us{
-    opacity: 1;
+.About_us {
+  opacity: 1;
 }
-.home{
-    float: right;
+.home {
+  float: right;
 }
 /* 내용 */
 .section {
@@ -96,6 +97,116 @@ body {
 }
 .content {
   padding-bottom: 20px;
+}
+/* board_list.css */
+
+#board_mask {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+}
+#board_wrap {
+  width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+.btitle {
+  font-size: 25pt;
+  text-align: center;
+  width: 1000px;
+  height: 50px;
+  border-bottom: 2px solid #999;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  padding-bottom: 40px;
+}
+.board_list_wrap {
+  width: 1000px;
+  height: 450px;
+}
+.write a {
+  text-decoration: none;
+  color: black;
+  font-family: "NanumSquare", sans-serif;
+}
+.write {
+  height: 40px;
+  line-height: 40px;
+}
+#board_list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 1000px;
+  height: 560px;
+}
+.bli {
+  display: flex;
+  width: 1000px;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid rgb(232, 232, 232);
+  text-align: center;
+}
+.bli a:hover{
+    color: blue;
+    font-weight: bold;
+}
+/* 첫번째 li태그 스타일 */
+.board_title {
+  font-weight: 700;
+  font-size: 13pt;
+  font-family: "NanumSquare", sans-serif;
+}
+.board_title div {
+  height: 45px;
+  line-height: 45px;
+}
+/* 게시판 각 항목별 스타일 */
+.num {
+  width: 10%;
+}
+.title {
+  width: 45%;
+}
+.title a {
+  text-decoration: none;
+  color: black;
+}
+.writer {
+  width: 22.5%;
+}
+.write_date {
+  width: 22.5%;
+}
+
+/* 게시판 글목록 페이지번호 */
+.board_page {
+  width: 430px;
+  height: 40px;
+  margin: 0 auto;
+}
+
+#page_num {
+  /* 리스트 스타일 없애는건 Ul태그에 입력 */
+  list-style-type: none;
+  width: 430px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+}
+.pnum {
+  width: 60px;
+  line-height: 40px;
+  text-align: center;
+  font-family: "NanumSquare", sans-serif;
+  /* 박스를 왼쪽으로 흐름, 배치하다 */
+  float: left;
+}
+.pnum a {
+  color: black;
+  text-decoration: none;
+  font-family: "NanumSquare", sans-serif;
 }
 /* foot */
 #footwrap {
@@ -131,21 +242,37 @@ body {
   top: 20px;
   right: 20px;
 }
-/* 
-@media all and (max-width: 1000px){
-    .tc_item{
-        height: auto;
-        flex-direction: column;
-        
-    }
-    .txt{
-        width: 100%;
-    }
-    .text_cont {
-        position: relative;
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 50px 42px 0px;
-        overflow: hidden;
-      }
-} */
+
+@media all and (max-width: 620px) {
+  #board_wrap{
+    width: 390px;
+  }
+  .btitle{
+    width: 390px;
+  }
+  .board_list_wrap{
+    width: 390px;
+  }
+  .write{
+    width: 390px;
+  }
+  #board_list{
+    width: 390px;
+  }
+  .bli{
+    width: 390px;
+    font-size: 10px;
+    height: auto;
+  }
+  .board_page{
+    width: 390px;
+  }
+  #page_num{
+    width: 290px;
+    font-size: 10px;
+    margin: 0 auto;
+  }
+  .pnum{
+    width: 40px;
+  }
+}
