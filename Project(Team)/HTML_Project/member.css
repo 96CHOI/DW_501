@@ -129,7 +129,7 @@ body {
 }
 .gallery-col img {
   border-radius: 10px;
-  width: 250px;
+  width: 260px;
   height: 400px;
   object-fit: cover;
 }
