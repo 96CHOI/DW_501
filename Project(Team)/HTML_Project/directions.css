@@ -104,7 +104,7 @@ body {
   padding: 50px 0 10px 0px;
   overflow: hidden;
   background: white;
-  width: 100%;
+  width: 900px;
 }
 .text_cont h1 {
   margin: 20px 0 15px;
@@ -122,7 +122,6 @@ body {
 .tc_item div {
   margin: 0 auto;
 }
-
 /* foot */
 #footwrap {
   border-top: 1px solid #455964;
@@ -163,17 +162,11 @@ body {
 @media all and (max-width: 620px) {
   .text_cont {
     position: relative;
-    /* max-width: 1200px; */
     margin: 0 auto;
     padding: 50px 0 10px 0px;
     overflow: hidden;
     background: white;
-    width: auto;
-  }
-  .text_cont .tc_item {
     width: 390px;
   }
-  .map {
-    width: 380px;
-  }
+  
 }
