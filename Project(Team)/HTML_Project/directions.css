@@ -86,8 +86,8 @@ body {
 .directions {
   opacity: 1;
 }
-.home{
-    float: right;
+.home {
+  float: right;
 }
 /* 내용 */
 .section {
@@ -119,8 +119,8 @@ body {
   padding-top: 32px;
   overflow: hidden;
 }
-.tc_item div{
-    margin: 0 auto;
+.tc_item div {
+  margin: 0 auto;
 }
 
 /* foot */
@@ -160,14 +160,20 @@ body {
   right: 20px;
 }
 
-@media all and (max-width: 620px){
-    .text_cont{
-        position: relative;
-        /* max-width: 1200px; */
-        margin: 0 auto;
-        padding: 50px 0 10px 0px;
-        overflow: hidden;
-        background: white;
-        width: auto;
-    }
+@media all and (max-width: 620px) {
+  .text_cont {
+    position: relative;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 50px 0 10px 0px;
+    overflow: hidden;
+    background: white;
+    width: auto;
+  }
+  .text_cont .tc_item {
+    width: 390px;
+  }
+  .map {
+    width: 380px;
+  }
 }
