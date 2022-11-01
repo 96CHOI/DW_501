@@ -94,7 +94,7 @@ body {
   border-top: 1px solid #eee;
 }
 .content {
-  padding-bottom: 20px;
+  height: 100%;
 }
 /*  게시글 보기 부분 외곽 스타일 */
 #write_box {
@@ -207,7 +207,7 @@ body {
 #foot {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 20px 15px 0 15px;
+  padding: 20px 15px 20px 15px;
   text-align: center;
   box-sizing: border-box;
   overflow: hidden;

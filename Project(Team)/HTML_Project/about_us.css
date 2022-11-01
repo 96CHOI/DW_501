@@ -95,7 +95,7 @@ body {
   background: #fff;
 }
 .content {
-  padding-bottom: 20px;
+  height: 100%;
 }
 .text_cont {
   position: relative;
@@ -149,7 +149,7 @@ body {
 #foot {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 20px 15px 0 15px;
+  padding: 20px 15px 20px 15px;
   text-align: center;
   box-sizing: border-box;
   overflow: hidden;

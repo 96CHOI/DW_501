@@ -94,9 +94,6 @@ body {
   border-top: 1px solid #eee;
   background: #fff;
 }
-.content {
-  padding-bottom: 20px;
-}
 .text_cont {
   position: relative;
   max-width: 1200px;
@@ -163,13 +160,12 @@ body {
 #footwrap {
   border-top: 1px solid #455964;
   background-color: #fff;
-  padding-top: 20px;
   z-index: 999;
 }
 #foot {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 20px 15px 0 15px;
+  padding: 20px 15px 20px 15px;
   text-align: center;
   box-sizing: border-box;
   overflow: hidden;

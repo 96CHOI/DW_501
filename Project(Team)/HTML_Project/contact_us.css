@@ -89,7 +89,10 @@ body {
   border-top: 1px solid #eee;
 }
 .content {
-  padding-bottom: 70px;
+  height: 100%;
+}
+.content {
+  height: 100%;
 }
 .text_cont {
   position: relative;
@@ -220,13 +223,12 @@ textarea {
 #footwrap {
   border-top: 1px solid #455964;
   background-color: #fff;
-  padding-top: 20px;
   z-index: 999;
 }
 #foot {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 20px 15px 0 15px;
+  padding: 20px 15px 20px 15px;
   text-align: center;
   box-sizing: border-box;
   overflow: hidden;
