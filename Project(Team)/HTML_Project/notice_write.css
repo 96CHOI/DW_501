@@ -92,112 +92,68 @@ body {
 /* 내용 */
 .section {
   border-top: 1px solid #eee;
+  background: #fff;
 }
 .content {
   height: 100%;
 }
-/*  게시글 보기 부분 외곽 스타일 */
-#write_box {
-  width: 100%;
-  height: auto;
-  margin-top: 100px;
-}
-#write_wrap {
+.main {
   width: 800px;
-  height: auto;
   margin: 0 auto;
-}
-
-/*  게시글 보기  */
-.write_form {
-  width: 800px;
-  height: 750px;
-  margin-top: 50px;
-  padding-top: 20px;
-  background-color: #fff;
-}
-.write_form h2{
-  text-align: center;
-  font-family: "NanumSquare", sans-serif;
-}
-.box {
-  float: right;
-  display: flex;
-  width: 850px;
-  height: 40px;
-  line-height: 40px;
-  margin-bottom: 20px;
-}
-.box_title {
-  width: 150px;
-  padding-right: 15px;
-  text-align: right;
-  font-size: 20px;
-  font-family: "NanumSquare", sans-serif;
-}
-.box_input input {
-  height: 20px;
-  width: 300px;
-}
-.box_input textarea {
-  width: 600px;
-  height: 400px;
-  resize: none;
-}
-.content_box {
-  height: auto;
-}
-.wdate,
-.view_count {
-  display: flex;
-  width: 400px;
-}
-.wdate input,
-.view_count input {
-  width: 150px;
-}
-.view_count {
-  text-align: right;
-  margin-left: 88px;
-}
-
-/*  버튼 부분 스타일 */
-.bt button {
-  width: 150px;
-  height: 40px;
-  background: #464646;
-  border-radius: 15px;
-  color: white;
-  font-size: 15pt;
-  font-weight: 800;
-  opacity: 0.5;
-  font-family: "NanumSquare", sans-serif;
-}
-.bt button:hover{
-  cursor: pointer;
-  opacity: 1;
-}
-.bt {
+  margin-top: 70px;
   position: relative;
-  width: 600px;
-  height: 50px;
-  margin-left: 165px;
-  margin-top: 30px;
-  margin-bottom: 50px;
-  display: flex;
+  padding: 40px 20px 20px 20px;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: block;
+}
+.main_list{
+  width: 700px;
   margin: 0 auto;
 }
-.bt div {
-  width: 33.3%;
+.main_list .img{
+  width: 650px;
+  margin: 0 auto;
 }
-.mod button {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.main h4 {
+  font-size: 16px;
+  line-height: 1;
+  color: #00a0e9;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+  margin-bottom: 17px;
+  text-align: center;
 }
-.del button {
-  position: absolute;
-  left: 75%;
+.main h3 {
+  font-size: 25px;
+  line-height: 1;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+.main h2{
+  text-align: center;
+  color: #00a0e9;
+}
+.main ul{
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.main ul li {
+  width: calc(50% - 10px);
+  display: flex;
+  align-items: center;
+}
+.main ul li span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 24px;
+  margin-left: 20px;
 }
 /* foot */
 #footwrap {
