@@ -78,11 +78,16 @@ body {
 .bt1 a {
   text-decoration: none;
   color: white;
-  font-family: "NanumSquare", sans-serif;
 }
 .bt1:hover {
   cursor: pointer;
   opacity: 1;
+}
+.Inquiry {
+  opacity: 1;
+}
+.home {
+  float: right;
 }
 /* 내용 */
 .section {
@@ -100,6 +105,8 @@ body {
   margin: 0 auto;
   padding: 0 0 10px 0px;
   overflow: hidden;
+  height: 600px;
+  margin-top: 100px;
 }
 .mid {
   height: 470px;
