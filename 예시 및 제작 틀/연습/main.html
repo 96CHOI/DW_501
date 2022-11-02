@@ -11,12 +11,13 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            background-image: url(../연습/img/배경.png);
+            background-size: cover;
         }
 
         .box {
             width: 100%;
             height: 969px;
-            background-color: red;
             align-items: center;
             display: flex;
             flex-direction: column;
@@ -26,7 +27,6 @@
         .box2 {
             width: 1200px;
             height: 800px;
-            background: #fff;
             margin: 0 auto;
             text-align: center;
             display: inline-grid;
@@ -37,7 +37,6 @@
         .box3 {
             width: 900px;
             height: 300px;
-            background-color: bisque;
             align-items: center;
             display: flex;
             margin: 0 auto;
@@ -45,12 +44,13 @@
         }
 
         .result1 {
-            width: 150px;
+            width: 250px;
             height: 50px;
-            background-color: aqua;
             display: flex;
             align-items: center;
             margin: 0 auto;
+            font-size: 22px;
+            font-weight: 600;
         }
 
         #what1 {
@@ -58,33 +58,64 @@
         }
 
         .result2 {
-            width: 150px;
+            width: 250px;
             height: 50px;
-            background-color: blueviolet;
             display: flex;
             align-items: center;
             margin: 0 auto;
+            font-size: 22px;
+            font-weight: 600;
         }
 
         #what2 {
-            width: 80px;
+            width: 100px;
         }
 
         #result {
-            width: 400px;
+            width: 500px;
             height: 50px;
-            background: red;
             margin: 0 auto;
             align-items: center;
             display: flex;
             text-align: center;
             justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+            color: blue;
+        }
+
+        .bt {
+            width: 500px;
+            margin: 0 auto;
+            display: flex;
         }
 
         button {
-            width: 200px;
+            width: 100px;
             height: 50px;
             margin: 0 auto;
+        }
+
+        table {
+            width: 500px;
+            height: 50px;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        table tr th {
+            height: 25px;
+            width: 80px;
+            font-size: 20px;
+            font-weight: 900;
+        }
+
+        table tr td {
+            height: 25px;
+            width: 80px;
+            font-size: 15px;
+            font-weight: 700;
         }
     </style>
 </head>
@@ -92,25 +123,68 @@
 <body>
     <div class="box">
         <div class="box2">
-            <h1>간단 랜덤숫자 비교 게임</h1>
+            <h1>😎 간단 랜덤숫자 비교 게임 💻</h1>
             <div class="box3">
                 <div class="result1">
-                    <h3>유저 : </h3>
-                    <div id="what1"></div>
+                    <h3>😎 유저 : </h3>
+                    <div id="what1" style="font-weight: 600; font-size: 30px; color: red;"></div>
                 </div>
                 <div class="result2">
-                    <h3>컴퓨터 : </h3>
-                    <div id="what2"></div>
+                    <h3>💻 컴퓨터 : </h3>
+                    <div id="what2" style="font-weight: 600; font-size: 30px; color: red;"></div>
                 </div>
             </div>
             <div id="result">
 
             </div>
+            <h1>기록</h1>
+
+            <table border="1" style="border: solid red;">
+                <tr>
+                    <th>진행 횟수</th>
+                    <th>승</th>
+                    <th>패</th>
+                    <th>무승부</th>
+                    <th class="victory">승률</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="tcount"></div>
+                    </td>
+                    <td>
+                        <div id="tWin"></div>
+                    </td>
+                    <td>
+                        <div id="tLose"></div>
+                    </td>
+                    <td>
+                        <div id="tDraw"></div>
+                    </td>
+                    <td>
+                        <div id="t"></div>
+                    </td>
+                </tr>
+            </table>
+            <div class="bt">
+                <button onclick="start()" id="go">GO!!</button>
+                <button onclick="reset()" id="reset">RESET!!</button>
+            </div>
         </div>
-        <button onclick="start()" id="go">시작하기</button>
     </div>
 </body>
 <script>
+    var win = 0;
+    var lose = 0;
+    var draw = 0;
+
+    function makeTable() {
+        tWin.innerHTML = win + " 회";
+        tLose.innerHTML = lose + " 회";
+        tDraw.innerHTML = draw + " 회";
+        tcount.innerHTML = win + lose + draw + " 회";
+        t.innerHTML = parseInt(win / (win + lose) * 100) + " %";
+    }
+
     function start() {
         var result = document.getElementById("result");
 
@@ -126,11 +200,18 @@
 
         if (user > com) {
             result.innerHTML = "유저 : " + user + " vs " + " 컴퓨터 : " + com + " = 유저 승!!!";
+            win = win + 1;
         } else if (user == com) {
             result.innerHTML = "유저 : " + user + " vs " + " 컴퓨터 : " + com + " = 비김...";
+            draw = draw + 1;
         } else {
             result.innerHTML = "유저 : " + user + " vs " + " 컴퓨터 : " + com + " = 컴퓨터 승ㅠㅠ";
+            lose = lose + 1;
         }
+        makeTable();
+    }
+    function reset() {
+        location.reload(true);
     }
 </script>
 
