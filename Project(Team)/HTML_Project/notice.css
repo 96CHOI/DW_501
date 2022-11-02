@@ -211,7 +211,7 @@ body {
 /* foot */
 #footwrap {
   border-top: 1px solid #455964;
-  margin-top: 80px;
+  background-color: #fff;
 }
 #foot {
   max-width: 1280px;
@@ -249,6 +249,12 @@ body {
   }
   .btitle{
     width: 390px;
+  }
+  .num {
+    width: 5%;
+  }
+  .title {
+    width: 55%;
   }
   .board_list_wrap{
     width: 390px;
