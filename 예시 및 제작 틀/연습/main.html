@@ -1,79 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YUN & BIN WEB</title>
-    <link rel="stylesheet" href="main.css">
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
-    <script src="../연습/main.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 100%;
+            height: 969px;
+            background-color: red;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .box2 {
+            width: 1200px;
+            height: 800px;
+            background: #fff;
+            margin: 0 auto;
+            text-align: center;
+            display: inline-grid;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .box3 {
+            width: 900px;
+            height: 300px;
+            background-color: bisque;
+            align-items: center;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+
+        .result1 {
+            width: 150px;
+            height: 50px;
+            background-color: aqua;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        #what1 {
+            width: 80px;
+        }
+
+        .result2 {
+            width: 150px;
+            height: 50px;
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        #what2 {
+            width: 80px;
+        }
+
+        #result {
+            width: 400px;
+            height: 50px;
+            background: red;
+            margin: 0 auto;
+            align-items: center;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+        }
+
+        button {
+            width: 200px;
+            height: 50px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <!-- <div class="top_menu">
-            <div class="all_header">
-                <div class="header0">
-                    <button class="come bt1"
-                    onclick="window.open('https://namecard.kakao.com/cyd684',
-                    'window_name',
-                    'width=430, height=800, location=no, status=no, scrollbars=yes');">
-                    궁금합니다!</button>
+    <div class="box">
+        <div class="box2">
+            <h1>간단 랜덤숫자 비교 게임</h1>
+            <div class="box3">
+                <div class="result1">
+                    <h3>유저 : </h3>
+                    <div id="what1"></div>
+                </div>
+                <div class="result2">
+                    <h3>컴퓨터 : </h3>
+                    <div id="what2"></div>
                 </div>
             </div>
-        </div> -->
-        <div id="logo_menu_wrap">
-            <div id="logo_menu">
-                <div id="logo">
-                    <img src="img/logo1.png">
-                </div>
-                <div class="menu">
-                    <div class="gnb">
-                        <ul id="menu_list">
-                            <li>COMPANY
-                                <ul>
-                                    <li>인사말</li>
-                                    <li>연혁</li>
-                                    <li>비전 및 이념</li>
-                                    <li>조직도</li>
-                                    <li>오시는 길</li>
-                                </ul>
-                            </li>
-                            <li>TEMPLATE
-                            </li>
-                            <li>CONSULT
-                            </li>
-                            <li>EMPLOY
-                                <ul>
-                                    <li>인사 정보</li>
-                                    <li>채용 정보</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div id="global_wrap">
-                    <ul id="util">
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="join.html">Join</a></li>
-                    </ul>
-                </div>
+            <div id="result">
+
             </div>
         </div>
-        <div class="center">
-            <div class="section">
-                <div class="article"><img src="../연습/img/center1.png"></div>                
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <img src="../연습/img/footer1.png">
+        <button onclick="start()" id="go">시작하기</button>
     </div>
 </body>
+<script>
+    function start() {
+        var result = document.getElementById("result");
+
+        var user = parseInt(Math.random() * 100) + 1;
+        var user1 = document.getElementById("what1");
+
+        user1.innerHTML = user;
+
+        var com = parseInt(Math.random() * 100) + 1;
+        var com1 = document.getElementById("what2");
+
+        com1.innerHTML = com;
+
+        if (user > com) {
+            result.innerHTML = "유저 : " + user + " vs " + " 컴퓨터 : " + com + " = 유저 승!!!";
+        } else if (user == com) {
+            result.innerHTML = "유저 : " + user + " vs " + " 컴퓨터 : " + com + " = 비김...";
+        } else {
+            result.innerHTML = "유저 : " + user + " vs " + " 컴퓨터 : " + com + " = 컴퓨터 승ㅠㅠ";
+        }
+    }
+</script>
+
 </html>
