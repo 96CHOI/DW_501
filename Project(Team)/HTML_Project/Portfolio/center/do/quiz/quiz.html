@@ -25,14 +25,14 @@
             <div class="resultParas">
                 <p class="guesses"></p>
                 <p class="lastResult"></p>
-                <p class="lowOrHi"></p>
+                <p class="lowOrHi" ></p>
             </div>
         </div>
     </div>
 </body>
 <script type="text/javascript">
 
-    var randomNumber = Math.floor(Math.random() * 100) + 1;
+    var randomNumber = parseInt(Math.random() * 100) + 1;
 
     var guesses = document.querySelector('.guesses');
     var lastResult = document.querySelector('.lastResult');
@@ -64,9 +64,9 @@
             lastResult.style.backgroundColor = 'tomato';
             lastResult.style.width = "1040px";
             if (userGuess < randomNumber) {
-                lowOrHi.textContent = '입력값이 정답보다 작습니다!';
+                lowOrHi.textContent =  userGuess + '는(은) 정답보다 작습니다!';
             } else if (userGuess > randomNumber) {
-                lowOrHi.textContent = '입력값이 정답보다 큽니다!';
+                lowOrHi.textContent = userGuess + '는(은) 정답보다 큽니다!';
             }
         }
 
