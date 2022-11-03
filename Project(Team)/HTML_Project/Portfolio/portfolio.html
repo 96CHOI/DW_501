@@ -13,7 +13,7 @@
     <article id="dm_wrap">
         <div class="main_head">
             <h1 class="logo">
-                <a href="main.html" class="inbox">
+                <a href="../main.html" class="inbox">
                     <img src="../img/logo1.png" alt="DnB_code, 디엔비코드, 웹 프로덕션 전문">
                 </a>
             </h1>
@@ -24,49 +24,49 @@
             <div class="top_menu">
                 <div class="all_header">
                     <div class="header0">
-                        <button class="home bt1"><a href="" main.html">HOME</a></button>
+                        <button class="home bt1"><a href="../main.html">HOME</a></button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="section">
             <div class="content">
-                <!-- 내용 종빈 7 최윤도 7 -->
+                <!-- 내용 -->
                 <div class="text_cont">
                     <h1>An example of our production</h1>
                     <div class="sub_section">
                         <div class="row">
                             <div class="gallery-col">
                                 <img src="../Portfolio/center/img/game1.png">
-                                <div class="layer">
-                                    <a href="../Portfolio/center/bin/html/dice.html">
+                                <a href="../Portfolio/center/bin/html/dice.html">
+                                    <div class="layer">
                                         <h3>간단한<br>주사위게임</h3>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
                             <div class="gallery-col">
                                 <img src="../Portfolio/center/img/game2.png">
-                                <div class="layer">
-                                    <a href="../Portfolio/center/do/과제7/index.html">
+                                <a href="../Portfolio/center/do/과제7/index.html">
+                                    <div class="layer">
                                         <h3>오징어게임<br>가위바위보</h3>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
                             <div class="gallery-col">
                                 <img src="../Portfolio/center/img/game3.png">
-                                <div class="layer">
-                                    <a href="../Portfolio/center/bin/html/loTTo.html">
+                                <a href="../Portfolio/center/bin/html/loTTo.html">
+                                    <div class="layer">
                                         <h3>간절한<br>로또 게임</h3>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
                             <div class="gallery-col">
                                 <img src="../Portfolio/center/img/game4.png">
-                                <div class="layer">
-                                    <a href="../Portfolio/center/do/과제8/index.html">
+                                <a href="../Portfolio/center/do/과제8/index.html">
+                                    <div class="layer">
                                         <h3>무서운<br>빙고 게임</h3>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -75,7 +75,7 @@
                             <div class="gallery-col">
                                 <img src="../Portfolio/center/img/game5.png">
                                 <a href="../Portfolio/center/bin/html/game.html">
-                                <div class="layer">
+                                    <div class="layer">
                                         <h3>간단한<br>가위바위보</h3>
                                     </div>
                                 </a>
@@ -83,23 +83,23 @@
                             <div class="gallery-col">
                                 <img src="../Portfolio/center/img/game6.png">
                                 <a href="../Portfolio/center/do/숫자게임/Checking.html">
-                                <div class="layer">
+                                    <div class="layer">
                                         <h3>컴퓨터와<br>숫자대결</h3>
                                     </div>
                                 </a>
                             </div>
                             <div class="gallery-col">
-                                <img src="../HTML_Project/img/member2.jpg">
-                                <a href="../Portfolio/center/do/숫자게임/Checking.html">
-                                <div class="layer">
-                                        <h3>예정</h3>
+                                <img src="../Portfolio/center/img/game7.png">
+                                <a href="../Portfolio/center/do/quiz/quiz.html">
+                                    <div class="layer">
+                                        <h3>숫자 맞추기 게임</h3>
                                     </div>
                                 </a>
                             </div>
                             <div class="gallery-col">
                                 <img src="../HTML_Project/img/member2.jpg">
                                 <a href="../Portfolio/center/do/숫자게임/Checking.html">
-                                <div class="layer">
+                                    <div class="layer">
                                         <h3>예정</h3>
                                     </div>
                                 </a>
@@ -132,7 +132,7 @@
                         <div class="row">
                             <div class="gallery-col">
                                 <img src="../Portfolio/center/img/coffe.png">
-                                <a href="../Portfolio/center/do/과제4/과제4.html">
+                                <a href="../Portfolio/center/do/과제3/과제3-1.html">
                                     <div class="layer">
                                         <h3>빽다방<br>커버</h3>
                                     </div>
@@ -183,5 +183,20 @@
         </div>
     </article>
 </body>
+
+<script>
+    var $circle = $('.circle');
+
+    function moveCircle(e) {
+        TweenLite.to($circle, 0.3, {
+            css: {
+                left: e.pageX,
+                top: e.pageY
+            }
+        });
+    }
+
+    $(window).on('mousemove', moveCircle);
+</script>
 
 </html>
