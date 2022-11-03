@@ -109,11 +109,11 @@ body {
   border-radius: 10px;
   display: block;
 }
-.main_list{
+.main_list {
   width: 700px;
   margin: 0 auto;
 }
-.main_list .img{
+.main_list .img {
   width: 650px;
   margin: 0 auto;
 }
@@ -134,11 +134,11 @@ body {
   letter-spacing: -0.03em;
   text-align: center;
 }
-.main h2{
+.main h2 {
   text-align: center;
   color: #00a0e9;
 }
-.main ul{
+.main ul {
   display: flex;
   width: 600px;
   flex-wrap: wrap;
@@ -190,48 +190,47 @@ body {
   right: 20px;
 }
 
-@media all and (max-width: 620px){
-  .write_form {
+@media all and (max-width: 620px) {
+  .main {
     width: 390px;
-    height: 750px;
-    margin-top: 50px;
-    padding-top: 20px;
-    background-color: #fff;
-  }
-  .box {
-    justify-content: start;
-    display: flex;
-    width: 390px;
-    height: 40px;
-    line-height: 40px;
-    margin-bottom: 20px;
-  }
-  .box_title {
-    width: 40px;
-    padding-right: 15px;
-    text-align: right;
-    font-size: 14px;
-    font-family: "NanumSquare", sans-serif;
-  }
-  .box_input input {
-    height: 20px;
-    width: 100px;
-  }
-  .box_input textarea {
-    width: 300px;
-    height: 400px;
-    resize: none;
-  }
-  .bt {
-    position: relative;
-    width: 390px;
-    height: 430px;
-    display: flex;
     margin: 0 auto;
-    flex-direction: column-reverse;
   }
-  .bt button {
-    width: 95px;
-    height: 40px;
-}
+  .main_list .img {
+    width: 390px;
+    margin: 0 auto;
+  }
+  .main_list .img img {
+    width: 360px;
+    margin: 0 auto;
+  }
+  .main_list {
+    width: 390px;
+    margin: 0 auto;
+  }
+  .main h4 {
+    font-size: 13px;
+    line-height: 1;
+    color: #00a0e9;
+    letter-spacing: -0.03em;
+    font-weight: 600;
+    margin-bottom: 17px;
+    text-align: center;
+  }
+  .main ul {
+    display: flex;
+    width: 470px;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .main ul li {
+    width: calc(40% - 10px);
+    display: flex;
+    align-items: center;
+  }
+  .not{
+    width: 300px;
+    margin-left: 25px;
+  }
 }
