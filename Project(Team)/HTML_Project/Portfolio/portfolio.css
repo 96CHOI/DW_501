@@ -116,6 +116,9 @@ body {
     flex-direction: column;
     padding: 0;
   }
+  .sub_section h2{
+    font-family: "NanumSquare", sans-serif;
+  }
   .row {
     margin-top: 50px;
     display: flex;
@@ -192,6 +195,25 @@ body {
   right: 20px;
 }
 
-@media all and (max-width: 620px){
-  
+@media all and (max-width: 390px){
+  .text_cont{
+    width: 350px;
+  }
+  .sub_section{
+    width: 350px;
+  }
+  .gallery-col{
+    width: 350px;
+  }
+  .gallery-col img{
+    width: 350px;
+    height: 300px;
+  }
+  .layer{
+    width: 350px;
+    height: 300px;
+  }
+  .row{
+    flex-direction: column;
+  }
 }
