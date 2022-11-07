@@ -179,11 +179,11 @@ button {
   border-radius: 5px;
   opacity: 0.5;
   color: white;
-  font-weight: 600;
 }
 button:hover {
   opacity: 1;
   cursor: pointer;
+  transition: 1.2s
 }
 
 textarea {

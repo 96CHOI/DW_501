@@ -152,6 +152,10 @@ body {
 .bli a:hover{
     color: blue;
     font-weight: bold;
+    text-decoration: underline;
+}
+button:hover{
+  transition: 1.2s
 }
 /* 첫번째 li태그 스타일 */
 .board_title {

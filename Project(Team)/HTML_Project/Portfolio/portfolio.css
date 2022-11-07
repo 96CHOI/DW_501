@@ -83,6 +83,7 @@ body {
 .bt1:hover {
   cursor: pointer;
   opacity: 1;
+  transition: 1.2s
 }
 .About_us {
   opacity: 1;

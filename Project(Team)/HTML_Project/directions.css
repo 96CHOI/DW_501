@@ -82,6 +82,7 @@ body {
 .bt1:hover {
   cursor: pointer;
   opacity: 1;
+  transition: 1.2s
 }
 .directions {
   opacity: 1;
