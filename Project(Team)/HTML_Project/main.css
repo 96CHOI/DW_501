@@ -100,18 +100,30 @@ body{
 .main_item_box:nth-child(1):hover{
     background-color: rgb(188, 240, 250);
     opacity: 1;
+    transform: scale(1.05);
+    transition: all 1.0s;
+    border-radius: 5px;
 }
 .main_item_box:nth-child(2):hover {
     background-color: rgb(251, 183, 255);
     opacity: 1;
+    transform: scale(1.05);
+    transition: all 1.0s;
+    border-radius: 5px;
 }
 .main_item_box:nth-child(3):hover {
     background-color: rgb(254, 210, 243);
     opacity: 1;
+    transform: scale(1.05);
+    transition: all 1.0s;
+    border-radius: 5px;
 }
 .main_item_box:nth-child(4):hover {
     background-color: rgb(239, 243, 182);
     opacity: 1;
+    transform: scale(1.05);
+    transition: all 1.0s;
+    border-radius: 5px;
 }
 .mian_item{
     position: relative;
