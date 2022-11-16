@@ -12,7 +12,7 @@ public class study2 {
 		// %d - 정수
 		// %f - 실수
 		// %s - 문자열
-		System.out.println(" "+ 100+ "  "+3.14+"  자바  ");
+		System.out.println(" "+ 100+ " "+3.14+"  자바  ");
 		System.out.println(" 줄바꿈도 된다");
 		
 		int age = 27;
