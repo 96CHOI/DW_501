@@ -32,7 +32,7 @@ public class file {
 				case "tv":
 					list.add(new tv(temp[1],Integer.parseInt(temp[2]),Integer.parseInt(temp[3])) );
 					break;
-				case " 에어컨":
+				case "에어컨":
 					list.add(new aircon(temp[1],Integer.parseInt(temp[2]),Integer.parseInt(temp[3])) );
 					break;
 				case "컴퓨터":

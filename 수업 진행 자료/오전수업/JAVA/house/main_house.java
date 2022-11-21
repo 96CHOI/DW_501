@@ -40,12 +40,12 @@ public class main_house {
 //		tv t4 = new house_item();
 		
 		// 클래스 구별 하는 연산자 ( 전체?아아아아아 지금
-		if ( t3 instanceof aircon) {
-			System.out.println("에어컨 객체 이다.");
-		}
-		if ( t3 instanceof tv ) {
-			System.out.println("tv 객체 이다.");
-		}
+//		if ( t3 instanceof aircon) {
+//			System.out.println("에어컨 객체 이다.");
+//		}
+//		if ( t3 instanceof tv ) {
+//			System.out.println("tv 객체 이다.");
+//		}
 		
 		// int = 정수 (0.14 뺌)
 		int a = (int)3.14;
