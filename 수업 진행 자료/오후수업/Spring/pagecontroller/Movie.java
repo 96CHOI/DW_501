@@ -1,10 +1,15 @@
 package com.example.demo;
 
+//import lombok.Getter;
+//import lombok.Setter;
+//
+//@Getter
+//@Setter
 public class Movie {
+	
 	private String Title;
 	private String Year;
 	private String Runtime;
-	private String Genre;
 	public String getTitle() {
 		return Title;
 	}
@@ -29,6 +34,6 @@ public class Movie {
 	public void setGenre(String genre) {
 		Genre = genre;
 	}
-	
+	private String Genre;
 	
 }
