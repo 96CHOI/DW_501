@@ -5,13 +5,16 @@ public class member {
 	private String name;
 	private String tel;
 	private String email;
+	private int money;
+	
 	
 	public member() {}
-	public member(String id, String name, String tel, String email) {
+	public member(String id, String name, String tel, String email, int money) {
 		this.id = id;
 		this.name = name;
 		this.tel = tel;
 		this.email = email;
+		this.money = money;
 	}
 	
 	
@@ -38,5 +41,11 @@ public class member {
 	}
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	public int getMoney() {
+		return money;
+	}
+	public void setMoney(int money) {
+		this.money = money;
 	}
 }
