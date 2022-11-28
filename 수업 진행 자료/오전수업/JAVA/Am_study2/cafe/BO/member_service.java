@@ -16,14 +16,14 @@ public class member_service {
 			return false;
 	}
 
-	public boolean sign_member(String id, String name, String tel, String email) {
+	public boolean sign_member(String id, String name, String tel, String email, String allergy) {
 		boolean check = mdao.id_check(id, email);
 		// id_check 메서드를 통해 아이디와 이메일이의 중복여부 확인 중복이면 회원가입 안됨
-		if (check) { // 중복이라면
+		if (!check) { // 중복이라면
 			System.out.println("이미 가입된 정보입니다. 다시 확인 후 진행해주세요.");
 			return false; // 로그인 실패 - 아이디, 비번 틀렸거나 없는경우
 		} else // 중복이 아니라면
-			mdao.member_insert(id, name, tel, email);
+			mdao.member_insert(id, name, tel, email, allergy);
 			System.out.println("회원가입이 완료되었습니다.");
 			return true;
 	}

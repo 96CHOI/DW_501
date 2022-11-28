@@ -12,11 +12,6 @@ import cafe.main.cafe_main;
 
 public class member_DAO extends base_DAO {
 
-	private Connection conn = null; // 데이터베이스 연결정보를 저장
-	private Statement st = null; // SQL 질의문을 데이터베이스에 전달
-	private PreparedStatement pt = null; // SQL 질의문을 데이터베이스에 전달
-	private ResultSet rs = null; // SQL질의문 조회 결과를 저장
-
 	public member_DAO() {
 		table_check();
 	}
@@ -32,8 +27,9 @@ public class member_DAO extends base_DAO {
 			rs = pt.executeQuery();
 			if(rs.next()) { // id와 tel이 일치하는 정보라면 로그인 성공
 				// 0 : id, 1 : name, 2 : tel, 3: email
-				cafe_main.user = new member(rs.getString(1),
-						rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5));
+				cafe_main.user = new member(rs.getString(2),
+						rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6),
+						rs.getString(7));
 				return false;
 			}
 		}catch(SQLException e) {
@@ -43,27 +39,29 @@ public class member_DAO extends base_DAO {
 	}	
 	
 	//아이디, 이메일 중복확인
-	public boolean id_check(String id, String email) {
+	public boolean id_check(String id, String pw) {
 		String sql = "select * from member where id=? or email=?";
 		//	member 테이블에서 입력받은 id 또는 email 이 있냐?
 		
 		try {
 			pt = conn.prepareStatement(sql);
 			pt.setString(1, id);
-			pt.setString(2, email);
+			pt.setString(2, pw);
 			rs = pt.executeQuery();
 			if(rs.next()) { // id또는 email이 있다면 rs.next()에는 값이 있다 , 그럼 중복
-				return true;
+				cafe_main.user = new member(rs.getString(2),rs.getString(3),rs.getString(4),
+						rs.getString(5),rs.getInt(6), rs.getString(7));
+				return false;
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		
-		return false; // rs에 값이 없다면 가입하지않은 아이디 또는 이메일 
+		return true; // rs에 값이 없다면 가입하지않은 아이디 또는 이메일 
 	}
 	
-	public boolean member_insert(String id, String name, String tel, String email) {
-		String sql = "insert into member(id, name, tel, email) values(?,?,?,?) ";
+	public boolean member_insert(String id, String name, String tel, String email, String allergy) {
+		String sql = "insert into member(id, name, tel, email) values(?,?,?,?,?) ";
 		
 		try {
 			pt = conn.prepareStatement(sql);
@@ -71,6 +69,7 @@ public class member_DAO extends base_DAO {
 			pt.setString(2, name);
 			pt.setString(3, tel);
 			pt.setString(4, email);
+			pt.setString(5, allergy);
 			pt.executeUpdate(); //query - select, 조회	, Update - 변경, 추가, 삭제
 			return true;
 		}catch(SQLException e) {
