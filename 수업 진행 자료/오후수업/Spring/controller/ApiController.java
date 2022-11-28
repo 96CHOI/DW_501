@@ -1,9 +1,11 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -20,6 +22,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.example.demo.service.ApiService;
+import com.example.demo.vo.Login;
+import com.example.demo.vo.Login2;
+import com.example.demo.vo.Movie;
 
 /*
  * RestController와 Controller 차이점
@@ -121,6 +128,26 @@ public class ApiController {
 		System.out.println("아이디 : " + login.getId());
 		System.out.println("이메일 : " + login.getEmail());
 		System.out.println("비밀번호 : " + login.getPw());
+		
+		return true;
+	}
+	
+	/* C(Create) R(Read) U(Update) D(Delete) 
+	 * Get : 데이터 조회 == select
+	 * Post : 데이터 생성 (전송) == insert
+	 * Patch : 데이터 업데이트 == update
+	 * Delete : 데이터 삭제 == delete
+	 */
+	@PostMapping("/api/v1/join2")
+	public boolean callJoin(@RequestBody Login2 login2, HttpServletRequest request) {
+		
+		String ip = request.getRemoteAddr();
+		System.out.println("요청받은 IP : " + ip);
+		
+		System.out.println("HTML에서 서버로 받아온 데이터입니다.");
+		System.out.println("회사 이름 : " + login2.getCompanyName());
+		System.out.println("사용자 이름 : " + login2.getUserName());
+		System.out.println("연락처 : " + login2.getPhone());
 		
 		return true;
 	}

@@ -1,4 +1,6 @@
-package com.example.demo;
+package com.example.demo.controller;
+
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +18,11 @@ public class PageController {
 	//사용자(클라이언트)가 /home 주소를 입력하면
 	//home이름을 가진 html을 return 한다는 걸 의미.
 	@GetMapping("/home")
-	public String callHomePage() {
+	public String callHomePage(HttpServletRequest request) {
+		
+		String ip = request.getRemoteAddr();
+		System.out.println("요청받은 IP : " + ip);
+		
 		return "home";
 	}
 	@GetMapping("/96choi")
@@ -24,11 +30,19 @@ public class PageController {
 		return "choi";
 	}
 	@GetMapping("/movie")
-	public String callMoviePage() {
+	public String callMoviePage(HttpServletRequest request) {
+		
+		String ip = request.getRemoteAddr();
+		System.out.println("요청받은 IP : " + ip);
+		
 		return "movie";
 	}
 	@GetMapping("/login")
 	public String callLoginPage() {
 		return "login";
+	}
+	@GetMapping("/login2")
+	public String callLogin2Page() {
+		return "login2";
 	}
 }
