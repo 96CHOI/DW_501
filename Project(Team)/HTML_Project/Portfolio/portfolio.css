@@ -98,7 +98,7 @@ body {
 }
 .text_cont {
     position: relative;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 50px 0 10px 0px;
     overflow: hidden;
@@ -128,6 +128,9 @@ body {
   .gallery-col {
     position: relative;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .gallery-col img {
     border-radius: 10px;
